@@ -1,0 +1,71 @@
+{
+  "error": {
+    "network": {
+      "404": "Network error"
+    }
+  },
+  "login": {
+    "page": {
+      "titles": {
+        "title": "Login"
+      },
+      "form": {
+        "email": {
+          "placeholder": "Your email",
+          "errors": {
+            "empty": "Enter email",
+            "valid": "Please enter a valid email"
+          }
+        },
+        "password": {
+          "placeholder": "Password",
+          "errors": {
+            "empty": "Enter password",
+            "valid": "Please enter a valid email"
+          }
+        }
+      }
+    },
+    "btns": {
+      "login": "Login"
+    },
+    "link": {
+      "forgot_password": "Forgot your password?",
+      "registration": "Registration"
+    }
+  },
+  "registration": {
+    "page": {
+      "title": "Registration",
+      "form": {
+        "email": {
+          "label": "Email",
+          "placeholder": "your@mail.com",
+          "errors": {
+            "empty": "Enter email",
+            "valid": "Please enter a valid email"
+          }
+        },
+        "password": {
+          "label": "Password",
+          "placeholder": "Password",
+          "errors": {
+            "empty": "Enter password",
+            "valid": "At least 8 characters\nMin one lowercase and uppercase latter\nMin one nubmer"
+          }
+        },
+        "confPassword": {
+          "label": "Confirm Password ",
+          "placeholder": "Confirm Password ",
+          "errors": {
+            "empty": "Enter password",
+            "not_match": "Passwords don't match"
+          }
+        }
+      }
+    },
+    "btns": {
+      "registration": "Registration"
+    }
+  }
+}
