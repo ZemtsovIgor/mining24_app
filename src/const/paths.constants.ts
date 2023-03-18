@@ -3,5 +3,12 @@ export enum PATHS {
   LOGIN = '/login',
   REGISTRATION = '/registration',
   FORGOT_PASSWORD = '/forgot-password',
-  DASHBOARD = '/dashboard'
+  DASHBOARD = '/dashboard',
+  CONTRACT = '/contract',
+  SHOP = '/shop',
+  STATISTICS = '/statistics',
+  TRANSACTIONS = '/transactions',
+  REFERRALS = '/referrals',
+  SETTINGS = '/settings',
+  PROFILE = '/profile',
 }

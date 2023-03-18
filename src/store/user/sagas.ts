@@ -4,6 +4,7 @@ import { setLoading, setError } from '../loadingsErrors/actions';
 // import { STORAGE_KEYS } from '../../const/storage_keys.constants';
 import types from '../actionTypes';
 import {ERRORS} from "../../const/errors.constants";
+import {STORAGE_KEYS} from "../../const/storage_keys.constants";
 
 function* login() {
 
@@ -31,6 +32,12 @@ function* registration() {
 }
 
 function* forgotPassword() {
+  const auth = {
+    accessToken: '123',
+    refreshToken: '321',
+  };
+
+  localStorage.setItem(STORAGE_KEYS.AUTH, JSON.stringify(auth));
   yield all([
     put({ type: types.FORGOT_PASSWORD_SUCCESS, payload: true }),
     put(setLoading(types.FORGOT_PASSWORD_REQUEST, false)),

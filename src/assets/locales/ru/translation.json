@@ -99,7 +99,14 @@
       "registration": "Register"
     }
   },
-  "navbar": {
-    "dashboard": "Main"
+  "navBar": {
+    "dashboard": "Dashboard",
+    "contract": "Contract",
+    "shop": "Shop",
+    "statistics": "Statistics",
+    "transactions": "Transactions",
+    "referrals": "Referrals",
+    "settings": "Settings",
+    "profile": "Profile"
   }
 }

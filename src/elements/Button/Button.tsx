@@ -35,7 +35,7 @@ export const Button: React.FC<Props> = ({
     <ButtonContainer
       as={as}
       to={to}
-      className={`${className} loading-btn ${primary ? '-primary' : ''} ${secondary ? '-secondary' : ''}`}
+      className={`${className} ${primary ? '-primary' : ''} ${secondary ? '-secondary' : ''}`}
       type={type}
       disabled={disabled}
       onClick={handleClick}

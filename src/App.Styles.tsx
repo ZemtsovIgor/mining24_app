@@ -13,6 +13,7 @@ export const GlobalStyle: any = createGlobalStyle`
     --gray: #142353;
     --light-gray: #8A92AD;
     --blue: #3B8EFF;
+    --green: #11B435;
     --turquoise: rgba(92, 214, 207, 0.75);
     --dark-turquoise: rgba(92, 214, 207, 1);
     --light-turquoise: rgba(92, 214, 207, 0.5);
@@ -21,7 +22,6 @@ export const GlobalStyle: any = createGlobalStyle`
     --violet: #8000ff;
     --pink: #dd59f8;
     --red: #B01616;
-    --green: #22E292;
     --light: #eaeaea;
     --dark: #373d47;
     --light-brown: #636363;

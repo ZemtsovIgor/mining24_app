@@ -188,7 +188,7 @@ const Registration: React.FC<RegistrationProps> = (props: RegistrationProps) => 
             />
             <div className="registration__button-wrap">
               <Button
-                className='registration__button'
+                className='registration__button loading-btn'
                 type="submit"
                 disabled={loading}
               >

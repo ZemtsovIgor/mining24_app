@@ -11,6 +11,11 @@ export const LANGUAGES = new Map([
   ['ru', 'Русский'],
 ]);
 
+export const LANGUAGES_SWITCHER = {
+  en: 'Eng',
+  ru: 'Eng'
+};
+
 const resources = {
   en: {
     translation: en

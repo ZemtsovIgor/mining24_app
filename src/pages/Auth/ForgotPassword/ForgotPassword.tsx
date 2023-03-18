@@ -155,7 +155,7 @@ const ForgotPassword: React.FC<ForgotPasswordProps> = (props: ForgotPasswordProp
                   />
                   <div className="forgotPassword__button-wrap">
                     <Button
-                      className='forgotPassword__button'
+                      className='forgotPassword__button loading-btn'
                       type="submit"
                       disabled={loading}
                     >

@@ -4,11 +4,48 @@ export const HeaderWrapper: any = styled.header`
   position: relative;
   flex: 0 0 auto;
   width: 100%;
-  height: 72px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 40px;
-  background: var(--dark-white);
-  box-shadow: inset 0px -1px 0px #ECECEC, inset 1px 0px 0px #F4F4F4;
+  padding: 35px 26px;
+  
+  .header {
+    &-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+    
+    &-title {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 44px;
+      color: var(--black);
+      
+      &__wrap {
+        
+      }
+    }
+
+    &-lang {
+      &__wrap {
+        margin-left: auto;
+        margin-right: 40px;
+      }
+    }
+
+    &-name {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.134065px;
+      text-transform: capitalize;
+      color: #004A88;
+      
+      &__wrap {
+
+      }
+    }
+  }
 `;
