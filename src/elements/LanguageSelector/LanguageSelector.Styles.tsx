@@ -6,7 +6,7 @@ export const LanguageSelectorStyles: any = styled(Select)`
   background: var(--white);
   border-radius: 5px;
   width: auto;
-  padding: 6px 14px 6px 8px;
+  padding: 1px 14px 1px 8px;
   
   .langSwitcher {
     &-lang {
@@ -80,6 +80,7 @@ export const LanguageSelectorStyles: any = styled(Select)`
     line-height: 17px;
     color: var(--black);
     background-color: transparent;
+    padding-right: 12px!important;
   }
 
   .MuiSelect-selectMenu {

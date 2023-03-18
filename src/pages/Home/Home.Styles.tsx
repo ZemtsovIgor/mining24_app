@@ -24,7 +24,7 @@ export const HomeContainer: any = styled.div`
       background: var(--white);
       box-shadow: 0 4px 28px rgba(0, 0, 0, 0.03);
       border-radius: 10px;
-      padding: 32px;
+      padding: 32px 32px 18px;
       
       &__wrap {
         display: flex;
@@ -57,6 +57,8 @@ export const HomeContainer: any = styled.div`
         line-height: 24px;
         color: #00CF3D;
         align-items: center;
+        padding: 9px;
+        justify-content: center;
         
         &_icon {
           margin-right: 8px;
@@ -80,7 +82,8 @@ export const HomeContainer: any = styled.div`
       }
       
       &__container {
-        padding: 37px 33px;
+        padding: 19px 17px 28px 30px;
+        width: 100%;
       }
       
       &__cell {
@@ -96,6 +99,8 @@ export const HomeContainer: any = styled.div`
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding-top: 29px;
+        width: 100%;
       }
       
       &__title {
@@ -105,7 +110,7 @@ export const HomeContainer: any = styled.div`
         color: var(--black);
         
         &_wrap {
-          margin-bottom: 10px;
+          margin-bottom: 9px;
         }
       }
       
@@ -137,7 +142,7 @@ export const HomeContainer: any = styled.div`
   .contracts {
     background: var(--white);
     border-radius: 10px;
-    padding: 31px 29px;
+    padding: 19px 29px 11px;
     width: 100%;
     flex-direction: column;
     gap: 13px;
@@ -165,7 +170,7 @@ export const HomeContainer: any = styled.div`
       line-height: 24px;
       color: var(--black);
       cursor: pointer;
-      height: 45px;
+      height: 47px;
       display: flex;
       align-items: center;
       
@@ -173,14 +178,13 @@ export const HomeContainer: any = styled.div`
         display: grid;
         grid-gap: 1em;
         align-items: center;
-        margin-bottom: 10px;
         border-bottom: 1px solid #EFEFEF;
 
-        grid-template-columns: 2fr repeat(4, 1fr);
+        grid-template-columns: 2.5fr 1fr 1.1fr 1.4fr 1.2fr;
 
         @media screen and (max-width: 900px) {
           width: 770px;
-          grid-template-columns: 2fr repeat(4, 1fr);
+          grid-template-columns: 2.5fr 1fr 1.1fr 1.4fr 1.2fr;
           > *:first-child {
             display: none;
           }
@@ -199,11 +203,11 @@ export const HomeContainer: any = styled.div`
         grid-gap: 1em;
         margin: 20px 0;
 
-        grid-template-columns: 2fr repeat(4, 1fr);
+        grid-template-columns: 2.5fr 1fr 1.1fr 1.4fr 1.2fr;
 
         @media screen and (max-width: 900px) {
           width: 770px;
-          grid-template-columns: 2fr repeat(4, 1fr);
+          grid-template-columns: 2.5fr 1fr 1.1fr 1.4fr 1.2fr;
           > *:first-child {
             display: none;
           }
@@ -212,14 +216,16 @@ export const HomeContainer: any = styled.div`
       
       &__cell {
         display: flex;
+
+        &_text {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 24px;
+          color: var(--black);
+        }
       }
       
-      &_text {
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 24px;
-        color: var(--black);
-      }
+      
       
       &_chart {
         
@@ -248,10 +254,11 @@ export const HomeContainer: any = styled.div`
       margin-bottom: 1rem;
 
       &__content {
-        padding: 16px;
+        padding: 24px 24px 16px;
       }
       
       &__title {
+        display: block;
         font-weight: 700;
         font-size: 28px;
         line-height: 36px;
@@ -261,7 +268,7 @@ export const HomeContainer: any = styled.div`
       
       &__list {
         list-style: none;
-        margin-bottom: 1rem;
+        margin-bottom: 24px;
         
         &_item {
           display: block;
@@ -332,19 +339,19 @@ export const HomeContainer: any = styled.div`
         background-image: url('/img/main/simple.svg');
         background-repeat: no-repeat;
         background-size: auto;
-        background-position: 100% 50%;
+        background-position: 91% 50%;
       }
       &.-medium {
         background-image: url('/img/main/medium.svg');
         background-repeat: no-repeat;
         background-size: auto;
-        background-position: 100% 50%;
+        background-position: 91% 50%;
       }
       &.-expert {
         background-image: url('/img/main/expert.svg');
         background-repeat: no-repeat;
         background-size: auto;
-        background-position: 100% 50%;
+        background-position: 91% 50%;
       }
     }
   }

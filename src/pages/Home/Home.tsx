@@ -55,10 +55,10 @@ const Home: React.FC = () => {
       <Container>
         <HomeContainer>
           <div className="grid-x grid-margin-x wallet">
-            <div className="cell grid-x small-12 xlarge-4 wallet-refill">
+            <div className="cell grid-x small-12 xlarge-45 wallet-refill">
               <div className="wallet-refill__wrap">
                 <div className="wallet-refill__balance_wrap">
-                  <span className="wallet-refill__balance">471 839 BTC</span>
+                  <span className="wallet-refill__balance">0.00275611 BTC</span>
                 </div>
                 <div className="wallet-refill__btns">
                   <Button
@@ -75,15 +75,15 @@ const Home: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="cell grid-x small-12 xlarge-8 wallet-share">
+            <div className="cell grid-x small-12 xlarge-75 wallet-share">
               <div className="wallet-share__wrap">
                 <div className="grid-x grid-margin-x wallet-share__container">
-                  <div className="cell grid-x small-4 xlarge-4 wallet-share__cell">
+                  <div className="cell grid-x small-5 xlarge-45 wallet-share__cell">
                     <div className="wallet-share__image_wrap">
                       <img className="wallet-share__image" src="/img/main/share.svg" alt="mining24" />
                     </div>
                   </div>
-                  <div className="cell grid-x small-8 xlarge-8 wallet-share__cell">
+                  <div className="cell grid-x small-7 xlarge-75 wallet-share__cell">
                     <div className="wallet-share__ref">
                       <div className="wallet-share__title_wrap">
                         <span className="wallet-share__title">{t('share.texts.share')}</span>

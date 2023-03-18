@@ -7,7 +7,8 @@ export const HeaderWrapper: any = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 35px 26px;
+  padding: 19px 26px;
+  font-family: var(--montserrat);
   
   .header {
     &-wrap {
@@ -31,7 +32,7 @@ export const HeaderWrapper: any = styled.header`
     &-lang {
       &__wrap {
         margin-left: auto;
-        margin-right: 40px;
+        margin-right: 33px;
       }
     }
 
