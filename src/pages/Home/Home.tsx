@@ -8,6 +8,7 @@ import {
 } from '../../elements';
 import { useTranslation } from "react-i18next";
 import {HomeContainer} from "./Home.Styles";
+import Contracts from '../../components/Contracts';
 
 const data:any = {
   items: [
@@ -44,7 +45,107 @@ const data:any = {
       ],
       price: '$5000'
     }
-  ]
+  ],
+  contracts: {
+    items: [
+      {
+        name: 'Simple',
+        hashrate: '19',
+        until: '31/12/2022',
+        earned: '8 583 399',
+        statistics: [
+          {
+            time: 1674231959,
+            value: 0.00001,
+          },
+          {
+            time: 1674241959,
+            value: 0.00004,
+          },
+          {
+            time: 1674251959,
+            value: 0.00002,
+          },
+          {
+            time: 1674261959,
+            value: 0.00007,
+          },
+          {
+            time: 1674271959,
+            value: 0.00004,
+          },
+          {
+            time: 1674281959,
+            value: 0.000010,
+          }
+        ]
+      },
+      {
+        name: 'Medium',
+        hashrate: '19',
+        until: '31/12/2022',
+        earned: '8 583 399',
+        statistics: [
+          {
+            time: 1674231959,
+            value: 0.00001,
+          },
+          {
+            time: 1674241959,
+            value: 0.00004,
+          },
+          {
+            time: 1674251959,
+            value: 0.00002,
+          },
+          {
+            time: 1674261959,
+            value: 0.00007,
+          },
+          {
+            time: 1674271959,
+            value: 0.00004,
+          },
+          {
+            time: 1674281959,
+            value: 0.000010,
+          }
+        ]
+      },
+      {
+        name: 'Profi',
+        hashrate: '19',
+        until: '31/12/2022',
+        earned: '8 583 399',
+        statistics: [
+          {
+            time: 1674231959,
+            value: 0.00001,
+          },
+          {
+            time: 1674241959,
+            value: 0.00004,
+          },
+          {
+            time: 1674251959,
+            value: 0.00002,
+          },
+          {
+            time: 1674261959,
+            value: 0.00007,
+          },
+          {
+            time: 1674271959,
+            value: 0.00004,
+          },
+          {
+            time: 1674281959,
+            value: 0.000010,
+          }
+        ]
+      }
+    ]
+  }
 };
 
 const Home: React.FC = () => {
@@ -111,88 +212,7 @@ const Home: React.FC = () => {
           <div className="home-title_wrap">
             <span className="home-title">Bought contracts</span>
           </div>
-          <div className="contracts">
-            <div className="contracts-header__wrap">
-              <div
-                className="contracts-header"
-              >
-                Name
-              </div>
-              <div
-                className="contracts-header"
-              >
-                Hashrate
-              </div>
-              <div
-                className="contracts-header"
-              >
-                Until
-              </div>
-              <div
-                className="contracts-header"
-              >
-                Earned
-              </div>
-              <div
-                className="contracts-header"
-              >
-                Statistics
-              </div>
-            </div>
-            <div className="contracts-body__wrap">
-              <div className="contracts-body__row">
-                <div className="contracts-body__cell">
-                  <span className="contracts-body__cell_text">Simple</span>
-                </div>
-                <div className="contracts-body__cell">
-                  <span className="contracts-body__cell_text">19 H/s</span>
-                </div>
-                <div className="contracts-body__cell">
-                  <span className="contracts-body__cell_text">31/12/2022</span>
-                </div>
-                <div className="contracts-body__cell">
-                  <span className="contracts-body__cell_text">8 583 399</span>
-                </div>
-                <div className="contracts-body__cell">
-                  <div className="contracts-body__cell_chart" />
-                </div>
-              </div>
-              <div className="contracts-body__row">
-                <div className="contracts-body__cell">
-                  <span className="contracts-body__cell_text">Medium</span>
-                </div>
-                <div className="contracts-body__cell">
-                  <span className="contracts-body__cell_text">19 H/s</span>
-                </div>
-                <div className="contracts-body__cell">
-                  <span className="contracts-body__cell_text">31/12/2022</span>
-                </div>
-                <div className="contracts-body__cell">
-                  <span className="contracts-body__cell_text">8 583 399</span>
-                </div>
-                <div className="contracts-body__cell">
-                  <div className="contracts-body__cell_chart" />
-                </div>
-              </div>
-              <div className="contracts-body__row">
-                <div className="contracts-body__cell">
-                  <span className="contracts-body__cell_text">Profi</span>
-                </div>
-                <div className="contracts-body__cell">
-                  <span className="contracts-body__cell_text">19 H/s</span>
-                </div>
-                <div className="contracts-body__cell">
-                  <span className="contracts-body__cell_text">31/12/2022</span>
-                </div>
-                <div className="contracts-body__cell">
-                  <span className="contracts-body__cell_text">8 583 399</span>
-                </div>
-                <div className="contracts-body__cell">
-                  <div className="contracts-body__cell_chart" />
-                </div>
-              </div>
-            </div>
-          </div>
+          <Contracts items={data.contracts.items} />
           <div className="home-title_wrap">
             <span className="home-title">Available for you</span>
           </div>

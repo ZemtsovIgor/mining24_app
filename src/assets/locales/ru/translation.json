@@ -110,7 +110,10 @@
     "transactions": "Transactions",
     "referrals": "Referrals",
     "settings": "Settings",
-    "profile": "Profile"
+    "profile": "Profile",
+    "simple": "Contract «Simple»",
+    "medium": "Contract «Medium»",
+    "profi": "Contract «Profi»"
   },
   "wallet": {
     "btns": {
@@ -123,6 +126,11 @@
       "share": "Share with friends",
       "meeting": "For every meeting",
       "reward": "You receive a reward"
+    }
+  },
+  "contracts": {
+    "header": {
+      "name": "Name"
     }
   }
 }

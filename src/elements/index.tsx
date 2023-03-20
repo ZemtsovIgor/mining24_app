@@ -7,6 +7,7 @@ import LanguageSelector from './LanguageSelector/LanguageSelector';
 import { Logo } from './Logo/Logo';
 import { Loader } from './Loader/Loader';
 import { MainContent } from './MainContent/MainContent';
+import { Modal } from './Modal/Modal';
 import { ReferralInput } from './ReferralInput/ReferralInput';
 import { Title } from './Title/Title';
 
@@ -20,6 +21,7 @@ export {
   Logo,
   Loader,
   MainContent,
+  Modal,
   ReferralInput,
   Title,
 };

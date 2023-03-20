@@ -5,6 +5,7 @@ export enum PATHS {
   FORGOT_PASSWORD = '/forgot-password',
   DASHBOARD = '/dashboard',
   CONTRACT = '/contract',
+  CONTRACT_ITEM = '/contract/*',
   SHOP = '/shop',
   STATISTICS = '/statistics',
   TRANSACTIONS = '/transactions',

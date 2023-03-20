@@ -11,6 +11,8 @@ import Login from './pages/Auth/Login';
 import Registration from './pages/Auth/Registration';
 import ForgotPassword from './pages/Auth/ForgotPassword';
 import Home from './pages/Home/Home';
+import Contract from './pages/Contract/Contract';
+import ContractItem from './pages/Contract/ContractItem';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
       <Router>
         <Route exact path="/" render={() => <Redirect to={PATHS.DASHBOARD} />} />
         <PrivateRoutes exact path={PATHS.DASHBOARD} component={Home} title="navBar.dashboard" />
+        <PrivateRoutes exact path={PATHS.CONTRACT} component={Contract} title="navBar.contract" />
+        <PrivateRoutes exact path={PATHS.CONTRACT_ITEM} component={ContractItem} title="navBar.contract" />
 
         <GuestRoutes
           exact
