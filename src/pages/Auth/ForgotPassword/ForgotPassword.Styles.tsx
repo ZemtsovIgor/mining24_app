@@ -5,94 +5,84 @@ export const ForgotPasswordStyles: any = styled.div`
   position: relative;
   min-height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 16px;
-  font-family: var(--montserrat);
 
   .forgotPassword {
+    &__image {
+      flex: 1;
+      background-image: url('/img/auth/auth_image.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
     &__container {
-      margin: 20px 0;
       display: flex;
+      position: relative;
+      justify-content: center;
       flex-direction: column;
       align-items: center;
+      flex: 1;
       width: 100%;
-      max-width: 456px;
     }
 
     &__box {
-      position: relative;
       width: 100%;
-      text-align: left;
+      text-align: center;
+      padding: 0 120px;
     }
 
     &__title {
-      text-align: center;
-      font-weight: 700;
-      font-size: 32px;
-      line-height: 44px;
-      margin: 0 0 6px;
+      margin: 0 0 20px;
     }
 
     &__text {
       font-weight: 400;
-      font-size: 14px;
-      line-height: 32px;
+      font-size: 18px;
+      line-height: 24px;
       color: var(--black);
       margin: 0;
-      margin-right: 3px;
+      margin-right: 12px;
 
       &-wrap {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 4px;
+        margin-bottom: 36px;
       }
 
       &-link {
-        color: var(--blue);
+        color: var(--light-green);
         font-weight: 700;
-        font-size: 14px;
-        line-height: 32px;
+        font-size: 18px;
+        line-height: 24px;
       }
     }
 
     &__button {
       width: 100%;
-      padding: 12px 12px;
-      display: inline-block;
-      text-align: center;
-      color: var(--white);
-      border-radius: var(--border-radius);
-      border: none;
-      background-color: var(--blue);
-      transition: background-color 0.3s, border-color 0.3s, color 0.3s;
-      cursor: pointer;
-      outline: none;
+      flex: 1;
 
       &-wrap {
         display: flex;
         justify-content: center;
-        margin-top: 19px;
-        grid-gap: 10px;
+        margin-top: 24px;
+        grid-gap: 16px;
       }
       
       &-link {
+        flex: 1;
         display: inline-block;
-        width: 100%;
-        border: 1px solid var(--blue);
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 22px;
         text-align: center;
-        letter-spacing: 0.134065px;
-        text-transform: capitalize;
-        color: var(--blue);
+        color: var(--white);
         border-radius: var(--border-radius);
-        padding: 12px 12px;
+        border: none;
+        background-color: var(--light-gray);
+        padding: 12px 20px;
         transition: background-color 0.3s, border-color 0.3s, color 0.3s;
         cursor: pointer;
         outline: none;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
       }
     }
 
@@ -114,18 +104,19 @@ export const ForgotPasswordStyles: any = styled.div`
   }
 
   .error__text {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 14px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
     color: var(--white);
+    margin: 12px 0;
 
     &-wrap {
-      width: 100%;
+      width: calc(100% - 48px);
       position: absolute;
       background: var(--red);
       border-radius: var(--border-radius);
       text-align: center;
-      top: -122px;
+      top: 40px;
     }
   }
 `;

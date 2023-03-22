@@ -1,12 +1,10 @@
 import styled from 'styled-components';
 
 export const TitleBlock: any = styled.h1`
-  margin: 0 0 32px;
-  font-size: 48px;
-  line-height: 48px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 56px;
   color: var(--black);
-  font-weight: 600;
-  letter-spacing: -0.03em;
 
 
   @media (max-width: 768px) {

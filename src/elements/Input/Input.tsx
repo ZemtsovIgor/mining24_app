@@ -5,7 +5,7 @@ import { cleanStringWithNumberVal } from '../../common/utils/formatters';
 import {
   FormControl,
   FormControlInput,
-  FormControlInputError, FormControlInputWrap, FormControlLabel, FormControlShow,
+  FormControlInputError, FormControlInputWrap, FormControlShow,
 } from './Input.Styles';
 
 type InputType = 'email' | 'password' | 'number' | 'text' | 'date' | 'phone';
@@ -15,7 +15,6 @@ interface Props {
   className?: string;
   type: InputType;
   name: string;
-  label?: string;
   placeholder?: string;
   disabled?: boolean;
   value?: string;
@@ -32,7 +31,6 @@ export const Input: React.FC<Props> = (props: Props) => {
     id,
     className,
     name,
-    label,
     type,
     value,
     error,
@@ -71,7 +69,6 @@ export const Input: React.FC<Props> = (props: Props) => {
 
   return (
     <FormControl className={`${className} ${error ? '-error' : ''}`}>
-      <FormControlLabel htmlFor={id}>{label}</FormControlLabel>
       <FormControlInputWrap>
         <FormControlInput
           ref={inputRef}
@@ -86,6 +83,7 @@ export const Input: React.FC<Props> = (props: Props) => {
           onBlur={onInputBlur}
           maxLength={maxLength || 100}
         />
+        <span className="placeholder">{placeholder}</span>
         {
           onShow ? (
             <FormControlShow type="button" onClick={onToggleShow}/>

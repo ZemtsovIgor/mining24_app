@@ -9,11 +9,16 @@ export const GlobalStyle: any = createGlobalStyle`
 
     --white: #ffffff;
     --black: #060931;
-    --light-blue: #F0F6FF;
+    --black800: #142353;
+    --black700: #213164;
+    --light-blue: #F4F7FE;
     --gray: #142353;
     --light-gray: #8A92AD;
     --blue: #3B8EFF;
     --green: #11B435;
+    --light-green: #1BE046;
+    --red: #DD1111;
+
     --turquoise: rgba(92, 214, 207, 0.75);
     --dark-turquoise: rgba(92, 214, 207, 1);
     --light-turquoise: rgba(92, 214, 207, 0.5);
@@ -21,7 +26,6 @@ export const GlobalStyle: any = createGlobalStyle`
     --dark-gray: #292f39;
     --violet: #8000ff;
     --pink: #dd59f8;
-    --red: #B01616;
     --light: #eaeaea;
     --dark: #373d47;
     --light-brown: #636363;

@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import {
   Button,
   Container, Icon,
-  MainContent,
+  MainContent, Modal,
   ReferralInput,
+  SocialNetworks,
 } from '../../elements';
 import { useTranslation } from "react-i18next";
 import {HomeContainer} from "./Home.Styles";
@@ -44,6 +45,39 @@ const data:any = {
         '200% Estimated ROI'
       ],
       price: '$5000'
+    },
+    {
+      type: 'expert',
+      color: 'blue',
+      title: 'Expert',
+      list: [
+        '110 Th Power',
+        '24 mo',
+        '200% Estimated ROI'
+      ],
+      price: '$5000'
+    },
+    {
+      type: 'expert',
+      color: 'blue',
+      title: 'Expert',
+      list: [
+        '110 Th Power',
+        '24 mo',
+        '200% Estimated ROI'
+      ],
+      price: '$5000'
+    },
+    {
+      type: 'expert',
+      color: 'blue',
+      title: 'Expert',
+      list: [
+        '110 Th Power',
+        '24 mo',
+        '200% Estimated ROI'
+      ],
+      price: '$5000'
     }
   ],
   contracts: {
@@ -51,8 +85,8 @@ const data:any = {
       {
         name: 'Simple',
         hashrate: '19',
-        until: '31/12/2022',
-        earned: '8 583 399',
+        until: '10/10/2022',
+        earned: '9 473 BTC',
         statistics: [
           {
             time: 1674231959,
@@ -83,8 +117,8 @@ const data:any = {
       {
         name: 'Medium',
         hashrate: '19',
-        until: '31/12/2022',
-        earned: '8 583 399',
+        until: '10/10/2022',
+        earned: '389 473 USDC',
         statistics: [
           {
             time: 1674231959,
@@ -115,8 +149,8 @@ const data:any = {
       {
         name: 'Profi',
         hashrate: '19',
-        until: '31/12/2022',
-        earned: '8 583 399',
+        until: '10/10/2022',
+        earned: '1 392 393 ETH',
         statistics: [
           {
             time: 1674231959,
@@ -150,6 +184,7 @@ const data:any = {
 
 const Home: React.FC = () => {
   const { t } = useTranslation();
+  const [modalReferralOpened, setModalReferralOpened] = useState<boolean>(false);
 
   return (
     <MainContent className="content-main home-page">
@@ -159,7 +194,8 @@ const Home: React.FC = () => {
             <div className="cell grid-x small-12 xlarge-45 wallet-refill">
               <div className="wallet-refill__wrap">
                 <div className="wallet-refill__balance_wrap">
-                  <span className="wallet-refill__balance">0.00275611 BTC</span>
+                  <Icon className="wallet-refill__balance_icon" name="btc" size="24" />
+                  <span className="wallet-refill__balance">471 839</span>
                 </div>
                 <div className="wallet-refill__btns">
                   <Button
@@ -201,6 +237,7 @@ const Home: React.FC = () => {
                           name="ref_link"
                           type="text"
                           value={`site_url/registration?ref=123`}
+                          onClick={() => setModalReferralOpened(true)}
                         />
                       </div>
                     </div>
@@ -253,6 +290,22 @@ const Home: React.FC = () => {
             </div>
           </div>
         </HomeContainer>
+
+        <Modal
+          opened={modalReferralOpened}
+          closeModal={() => setModalReferralOpened(false)}
+          className="modal"
+          hasCloseBtn={true}
+        >
+          <div className="modal-content">
+            <h4 className="modal-title">{t('modal.referral.title')}</h4>
+            <p className="modal-text">{t('modal.referral.description')}</p>
+            <div className="modal-social__wrap">
+              <SocialNetworks />
+            </div>
+          </div>
+        </Modal>
+
       </Container>
     </MainContent>
   );

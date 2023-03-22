@@ -4,6 +4,7 @@ export const MainContentBlock: any = styled.main`
   width: 100%;
   height: calc(100% - 104px);
   flex: 1 1 auto;
+  font-family: var(--montserrat);
 
   &.content-main_bg-1 {
     background: url('/img/bg/bg_1.svg') bottom right / contain no-repeat;

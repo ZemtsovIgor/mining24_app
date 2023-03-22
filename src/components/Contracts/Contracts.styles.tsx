@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 
-export const ContractsWrapper: any = styled.header`
+export const ContractsWrapper: any = styled.div`
+  margin-bottom: -7px;
+  
   .contracts {
     background: var(--white);
     border-radius: 10px;
-    padding: 19px 29px 11px;
+    padding: 19px 20px;
     width: 100%;
     flex-direction: column;
     gap: 13px;
@@ -42,11 +44,11 @@ export const ContractsWrapper: any = styled.header`
         align-items: center;
         border-bottom: 1px solid #EFEFEF;
 
-        grid-template-columns: 2.5fr 1fr 1.1fr 1.4fr 1.2fr;
+        grid-template-columns: 1.1fr 1.1fr 1.1fr 1.1fr 0.8fr;
 
         @media screen and (max-width: 900px) {
           width: 770px;
-          grid-template-columns: 2.5fr 1fr 1.1fr 1.4fr 1.2fr;
+          grid-template-columns: 1.1fr 1.1fr 1.1fr 1.1fr 0.8fr;
           > *:first-child {
             display: none;
           }
@@ -63,14 +65,14 @@ export const ContractsWrapper: any = styled.header`
       &__row {
         display: grid;
         grid-gap: 1em;
-        margin: 12px 0;
+        margin: 12px 0 11px;
         align-items: center;
 
-        grid-template-columns: 2.5fr 1fr 1.1fr 1.4fr 1.2fr;
+        grid-template-columns: 1.1fr 1.1fr 1.1fr 1.1fr 0.8fr;
 
         @media screen and (max-width: 900px) {
           width: 770px;
-          grid-template-columns: 2.5fr 1fr 1.1fr 1.4fr 1.2fr;
+          grid-template-columns: 1.1fr 1.1fr 1.1fr 1.1fr 0.8fr;
           > *:first-child {
             display: none;
           }

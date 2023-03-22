@@ -4,47 +4,128 @@ export const RegistrationStyles: any = styled.div`
   position: relative;
   min-height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 16px;
-  font-family: var(--montserrat);
 
   .registration {
+    &__image {
+      flex: 1;
+      background-image: url('/img/auth/auth_image.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
     &__container {
-      margin: 20px 0;
       display: flex;
+      position: relative;
+      justify-content: center;
       flex-direction: column;
       align-items: center;
+      flex: 1;
       width: 100%;
-      max-width: 456px;
     }
 
     &__box {
       width: 100%;
-      text-align: left;
+      text-align: center;
+      padding: 0 120px;
     }
 
     &__title {
-      text-align: center;
-      font-weight: 700;
-      font-size: 32px;
-      line-height: 44px;
+      margin: 0 0 20px;
+    }
+
+    &__text {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
+      color: var(--black);
+      margin: 0;
+      margin-right: 12px;
+
+      &-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 36px;
+      }
+
+      &-link {
+        color: var(--light-green);
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+    
+    &__hint {
+      margin-bottom: 17px;
+      background: var(--white);
+      border-radius: var(--border-radius);
+      padding: 3px 20px;
+      margin-top: -7px;
+      
+      &-list {
+        list-style: none;
+        text-align: left;
+      }
+      
+      &-item {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: var(--black700);
+        margin: 6px 0;
+        
+        &:before {
+          content: '';
+          display: inline-block;
+          background-color: var(--light-green);
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          margin-right: 8px;
+        }
+      }
     }
 
     &__button {
+      width: 100%;
+
       &-wrap {
         display: flex;
         justify-content: center;
-        margin-top: 18px;
+        margin-top: 24px;
+      }
+    }
+
+    &__links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 19px;
+
+      &-link {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+        color: var(--light-green);
       }
     }
   }
 
-  .error-text {
-    margin: 5px 0;
-    color: var(--red);
-    font-size: 12px;
-    line-height: 14px;
-    text-align: left;
+  .error__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--white);
+    margin: 12px 0;
+
+    &-wrap {
+      width: calc(100% - 48px);
+      position: absolute;
+      background: var(--red);
+      border-radius: var(--border-radius);
+      text-align: center;
+      top: 40px;
+    }
   }
 `;

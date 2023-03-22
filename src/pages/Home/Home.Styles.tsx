@@ -41,6 +41,10 @@ export const HomeContainer: any = styled.div`
         &_wrap {
           margin-bottom: 16px;
         }
+        
+        &_icon {
+          margin-right: -3px;
+        }
       }
       
       &__btns {
@@ -51,7 +55,7 @@ export const HomeContainer: any = styled.div`
         width: 100%;
         background: conic-gradient(from 194.89deg at 30.26% -12.73%, rgba(0, 250, 70, 0.13) -66.95deg, rgba(255, 255, 255, 0) 5.23deg, rgba(176, 252, 80, 0.1) 61.72deg, rgba(74, 181, 179, 0.117441) 142.5deg, rgba(0, 10, 250, 0.13) 217.5deg, rgba(0, 250, 70, 0.13) 293.05deg, rgba(255, 255, 255, 0) 365.23deg), conic-gradient(from 234.81deg at 102.25% 28.97%, rgba(0, 250, 70, 0.13) -136.87deg, rgba(255, 255, 255, 0) 5.23deg, rgba(176, 252, 80, 0.1) 61.72deg, rgba(74, 181, 179, 0.117441) 135.62deg, rgba(0, 250, 70, 0.13) 223.13deg, rgba(255, 255, 255, 0) 365.23deg), conic-gradient(from 223.81deg at 103.05% -6.34%, rgba(250, 225, 0, 0.13) -67.77deg, rgba(255, 255, 255, 0) 5.23deg, rgba(176, 252, 80, 0.1) 61.72deg, rgba(74, 181, 179, 0.117441) 135.62deg, rgba(0, 130, 250, 0.13) 244.86deg, rgba(250, 225, 0, 0.13) 292.23deg, rgba(255, 255, 255, 0) 365.23deg), #F5F9FF;
         border-radius: 7px;
-        margin-bottom: 12px;
+        margin-bottom: 0;
         font-weight: 700;
         font-size: 18px;
         line-height: 24px;
@@ -67,6 +71,7 @@ export const HomeContainer: any = styled.div`
         &.-green {
           background: linear-gradient(94.02deg, rgba(255, 255, 255, 0.29) 0%, rgba(255, 255, 255, 0) 100%), #1BE046;
           color: var(--white);
+          margin-bottom: 14px;
         }
       }
     }
@@ -82,7 +87,7 @@ export const HomeContainer: any = styled.div`
       }
       
       &__container {
-        padding: 19px 17px 28px 30px;
+        padding: 11px 17px 21px 30px;
         width: 100%;
       }
       
@@ -99,7 +104,7 @@ export const HomeContainer: any = styled.div`
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding-top: 29px;
+        padding-top: 37px;
         width: 100%;
       }
       
@@ -144,7 +149,9 @@ export const HomeContainer: any = styled.div`
   .available {
     
     &-container {
-      
+      overflow: auto;
+      flex: 0 0 100%;
+      flex-wrap: nowrap;
     }
     
     .price {
@@ -160,6 +167,7 @@ export const HomeContainer: any = styled.div`
     &-card {
       border-radius: 8px;
       margin-bottom: 1rem;
+      flex: 0 0 calc(33.33333% - 1rem);
 
       &__content {
         padding: 24px 24px 16px;

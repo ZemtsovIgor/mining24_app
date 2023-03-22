@@ -9,6 +9,7 @@ import { Loader } from './Loader/Loader';
 import { MainContent } from './MainContent/MainContent';
 import { Modal } from './Modal/Modal';
 import { ReferralInput } from './ReferralInput/ReferralInput';
+import { SocialNetworks } from './SocialNetworks/SocialNetworks';
 import { Title } from './Title/Title';
 
 export {
@@ -23,5 +24,6 @@ export {
   MainContent,
   Modal,
   ReferralInput,
+  SocialNetworks,
   Title,
 };

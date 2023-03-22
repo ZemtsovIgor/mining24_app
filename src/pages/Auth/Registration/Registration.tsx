@@ -13,6 +13,8 @@ import {
 } from '../../../elements';
 import { RegistrationStyles } from './Registration.Styles';
 import {RegistrationParams} from "../../../api";
+import {Link} from "react-router-dom";
+import {PATHS} from "../../../const/paths.constants";
 
 export interface RegistrationProps {
   loading: boolean;
@@ -140,20 +142,30 @@ const Registration: React.FC<RegistrationProps> = (props: RegistrationProps) => 
 
   return (
     <RegistrationStyles className='registration'>
+      <div className="registration__image" />
       <div className="registration__container">
+        {error && (
+          <div className="error__text-wrap">
+            <p className="error__text">{t(`error.${error}`)}</p>
+          </div>
+        )}
+
         <div className="registration__box">
-          {error && <div className="error-text">{t(`${error}`)}</div>}
 
           <Title className='registration__title'>
             {t('registration.page.title')}
           </Title>
+
+          <div className="registration__text-wrap">
+            <p className="registration__text" >{t('registration.page.texts.text')}</p>
+            <Link className="registration__text-link" to={PATHS.LOGIN}>{t('registration.link.login')}</Link>
+          </div>
 
           <form onSubmit={onSubmit}>
             <Input
               className='lg bold'
               type="email"
               name="email"
-              label={`${t('registration.page.form.email.label')}`}
               value={values.email}
               placeholder={`${t('registration.page.form.email.placeholder')}`}
               error={errors.email}
@@ -164,7 +176,6 @@ const Registration: React.FC<RegistrationProps> = (props: RegistrationProps) => 
               className='lg bold'
               type="password"
               name="password"
-              label={`${t('registration.page.form.password.label')}`}
               value={values.password}
               placeholder={`${t('registration.page.form.password.placeholder')}`}
               error={errors.password}
@@ -173,11 +184,17 @@ const Registration: React.FC<RegistrationProps> = (props: RegistrationProps) => 
               show={showInput.password}
               onShow={onToggleShow}
             />
+            <div className="registration__hint">
+              <ul className="registration__hint-list">
+                <li className="registration__hint-item">{t('registration.page.form.hint.one')}</li>
+                <li className="registration__hint-item">{t('registration.page.form.hint.two')}</li>
+                <li className="registration__hint-item">{t('registration.page.form.hint.three')}</li>
+              </ul>
+            </div>
             <Input
               className='lg bold'
               type="password"
               name="confPassword"
-              label={`${t('registration.page.form.confPassword.label')}`}
               value={values.confPassword}
               placeholder={`${t('registration.page.form.confPassword.placeholder')}`}
               error={errors.confPassword}

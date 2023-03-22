@@ -112,14 +112,14 @@ const ForgotPassword: React.FC<ForgotPasswordProps> = (props: ForgotPasswordProp
 
   return (
     <ForgotPasswordStyles className='forgotPassword'>
+      <div className="forgotPassword__image" />
       <div className="forgotPassword__container">
+        {error && (
+          <div className="forgotPassword__text-wrap">
+            <p className="forgotPassword__text">{t(`error.${error}`)}</p>
+          </div>
+        )}
         <div className="forgotPassword__box">
-          {error && (
-            <div className="forgotPassword__text-wrap">
-              <p className="forgotPassword__text">{t(`error.${error}`)}</p>
-            </div>
-          )}
-
           <Title className='forgotPassword__title'>
             {t('forgotPassword.page.title')}
           </Title>
@@ -146,7 +146,6 @@ const ForgotPassword: React.FC<ForgotPasswordProps> = (props: ForgotPasswordProp
                     className='lg bold'
                     type="email"
                     name="email"
-                    label={`${t('forgotPassword.page.form.email.label')}`}
                     value={values.email}
                     placeholder={`${t('forgotPassword.page.form.email.placeholder')}`}
                     error={error ? t(`error.${error}`) : errors.email}

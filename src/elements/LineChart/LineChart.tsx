@@ -25,21 +25,21 @@ const LineChart = ({ data }: LineChartProps) => {
             dataKey="time"
             axisLine={true}
             tickLine={true}
-            tickFormatter={(time) => new Date(time).toLocaleDateString(undefined, { day: '2-digit', month: '2-digit', year: '2-digit'  })}
+            tickFormatter={(time) => new Date(time).toLocaleDateString('en', { month: 'short' })}
             minTickGap={10}
           />
           <YAxis
             dataKey="value"
             tickCount={6}
             scale="linear"
-            axisLine={true}
+            axisLine={{stroke: '#5F698D', width: 4}}
             tickLine={true}
             fontSize="12px"
             tickFormatter={(val) => val}
             orientation="right"
-            tick={{ dx: 10, fill: '#655B96' }}
+            tick={{ dx: 10, fill: '#5F698D', width: 4 }}
           />
-          <Area dataKey="value" type="monotone" stroke='#CE2A96' fill="url(#gradient)" strokeWidth={2} />
+          <Area dataKey="value" type="monotone" stroke='#58E664' fill="url(#gradient)" strokeWidth={4} />
         </AreaChart>
       </ResponsiveContainer>
     </LineChartStyles>

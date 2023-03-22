@@ -17,10 +17,11 @@ interface Props {
   placeholder?: string;
   value?: string;
   text?: string;
+  onClick?: () => void;
 }
 
 export const ReferralInput: React.FC<Props> = (props: Props) => {
-  const { id, className, name, type, placeholder, value, text } = props;
+  const { id, className, name, type, placeholder, value, text, onClick } = props;
   const { t } = useTranslation();
 
   return (
@@ -36,7 +37,10 @@ export const ReferralInput: React.FC<Props> = (props: Props) => {
           defaultValue={value}
         />
       </div>
-      <CopyToClipboard text={`${value}`}>
+      <CopyToClipboard
+        text={`${value}`}
+        onCopy={onClick}
+      >
         <ReferralCopy className="ref-input__btn" type="button" data-title={`${t('common.copy')}`}>
           <Icon name="referral" size="23" />
         </ReferralCopy>

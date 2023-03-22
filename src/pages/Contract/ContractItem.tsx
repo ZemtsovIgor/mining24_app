@@ -8,6 +8,7 @@ import {
 } from '../../elements';
 import { ContractItemContainer } from "./Contract.Styles";
 import LineChart from "../../elements/LineChart/LineChart";
+import {useTranslation} from "react-i18next";
 
 const data:any = {
   name: 'Simple',
@@ -43,16 +44,19 @@ const data:any = {
 };
 
 const ContractItem: React.FC = () => {
+  const { t } = useTranslation();
   const [modalCanselContractOpened, setModalCanselContractOpened] = useState<boolean>(false);
 
   return (
     <MainContent className="content-main home-page">
       <Container>
         <ContractItemContainer>
-          <div className="title-wrap">
-            <span className="title">Statistics</span>
-          </div>
+
           <div className="chart-wrap">
+            <div className="title-wrap">
+              <span className="title">Statistics</span>
+            </div>
+
             <LineChart
               data={data.statistics}
             />
@@ -71,10 +75,11 @@ const ContractItem: React.FC = () => {
         <Modal
           opened={modalCanselContractOpened}
           closeModal={() => setModalCanselContractOpened(false)}
-          className="modal"
+          className="modal canselContract"
+          hasCloseBtn={true}
         >
           <div className="modal-content">
-            <h4 className="modal-title">Cancel contract?</h4>
+            <h4 className="modal-title">{t('modal.canselContract.title')}</h4>
             <div className="modal-btn__wrap">
               <Button
                 className="modal-btn"

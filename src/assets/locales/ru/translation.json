@@ -16,15 +16,13 @@
       },
       "form": {
         "email": {
-          "label": "Email",
-          "placeholder": "your@mail.com",
+          "placeholder": "Email",
           "errors": {
             "empty": "Enter email",
             "valid": "Please enter a valid email"
           }
         },
         "password": {
-          "label": "Password",
           "placeholder": "Password",
           "errors": {
             "empty": "Enter password",
@@ -44,17 +42,18 @@
   "registration": {
     "page": {
       "title": "Registration",
+      "texts": {
+        "text": "You have account?"
+      },
       "form": {
         "email": {
-          "label": "Email",
-          "placeholder": "your@mail.com",
+          "placeholder": "Email",
           "errors": {
             "empty": "Enter email",
             "valid": "Please enter a valid email"
           }
         },
         "password": {
-          "label": "Password",
           "placeholder": "Password",
           "errors": {
             "empty": "Enter password",
@@ -68,11 +67,19 @@
             "empty": "Enter password",
             "not_match": "Passwords don't match"
           }
+        },
+        "hint": {
+          "one": "At least 8 characters",
+          "two": "Min one lowercase and uppercase latter",
+          "three": "Min one nubmer"
         }
       }
     },
     "btns": {
       "registration": "Registration"
+    },
+    "link": {
+      "login": "Login"
     }
   },
   "forgotPassword": {
@@ -84,8 +91,7 @@
       },
       "form": {
         "email": {
-          "label": "Email",
-          "placeholder": "your@mail.com",
+          "placeholder": "Email",
           "errors": {
             "empty": "Enter email",
             "valid": "Please enter a valid email"
@@ -131,6 +137,24 @@
   "contracts": {
     "header": {
       "name": "Name"
+    }
+  },
+  "modal": {
+    "referral": {
+      "title": "Use your referral link to\ninvite friends",
+      "description": "Share with your friends on social networks and\nget rewarded after a friend makes his first\ncontract"
+    },
+    "canselContract": {
+      "title": "Cancel contract?"
+    },
+    "needVerify": {
+      "title": "You need to verify your\nprofile to continue",
+      "description": "Verify your profile in settings",
+      "btn": "Verify profile"
+    },
+    "paid": {
+      "title": "Successfully paid",
+      "description": "The contract was added to your dashboard"
     }
   }
 }

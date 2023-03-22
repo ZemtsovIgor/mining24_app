@@ -129,14 +129,14 @@ const Registration: React.FC<LogInProps> = (props: LogInProps) => {
 
   return (
     <LoginStyles className='login'>
+      <div className="login__image" />
       <div className="login__container">
+        {error && (
+          <div className="error__text-wrap">
+            <p className="error__text">{t(`error.${error}`)}</p>
+          </div>
+        )}
         <div className="login__box">
-          {error && (
-            <div className="error__text-wrap">
-              <p className="error__text">{t(`error.${error}`)}</p>
-            </div>
-          )}
-
           <Title className='login__title'>
             {t('login.page.title')}
           </Title>
@@ -151,7 +151,6 @@ const Registration: React.FC<LogInProps> = (props: LogInProps) => {
               className='lg bold'
               type="email"
               name="email"
-              label={`${t('login.page.form.email.label')}`}
               value={values.email}
               placeholder={`${t('login.page.form.email.placeholder')}`}
               error={error ? t(`error.${error}`) : errors.email}
@@ -162,8 +161,6 @@ const Registration: React.FC<LogInProps> = (props: LogInProps) => {
               className='lg bold'
               type="password"
               name="password"
-              label={`${t('login.page.form.password.label')}`}
-              value={values.password}
               placeholder={`${t('login.page.form.password.placeholder')}`}
               error={error ? t(`error.${error}`) : errors.password}
               onChange={onChange}
