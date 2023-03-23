@@ -13,7 +13,7 @@ export const LANGUAGES = new Map([
 
 export const LANGUAGES_SWITCHER = {
   en: 'Eng',
-  ru: 'Eng'
+  ru: 'Рус'
 };
 
 const resources = {

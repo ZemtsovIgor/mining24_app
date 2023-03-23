@@ -10,6 +10,7 @@ import {
 import { useTranslation } from "react-i18next";
 import {HomeContainer} from "./Home.Styles";
 import Contracts from '../../components/Contracts';
+import Recommended from "../../components/Recommended";
 
 const data:any = {
   items: [
@@ -254,40 +255,7 @@ const Home: React.FC = () => {
             <span className="home-title">Available for you</span>
           </div>
           <div className="available">
-            <div className="grid-x grid-margin-x available-container">
-              {
-                data.items.map((item:any, index: number) => (
-                  <div
-                    key={`available-${index + 1}`}
-                    className={`cell grid-x small-4 xlarge-4 available-card -${item.color} -${item.type}`}
-                  >
-                    <div className="cell available-card__content">
-                      <span className="available-card__title">{item.title}</span>
-                      {
-                        (!!item.list.length) && (
-                          <ul className="available-card__list">
-                            {
-                              item.list.map((listItem: string, listIndex: number) => (
-                                <li className="available-card__list_item" key={`available-list-${listIndex + 1}`}>{listItem}</li>
-                              ))
-                            }
-                          </ul>
-                        )
-                      }
-                      <span className="available-card__price">{item.price}</span>
-
-                      <div className="available-card__btn_wrap">
-                        <Button
-                          className='available-card__btn'
-                        >
-                          Buy contract
-                        </Button>
-                      </div>
-                    </div>
-                  </div>
-                ))
-              }
-            </div>
+            <Recommended items={data.items} />
           </div>
         </HomeContainer>
 

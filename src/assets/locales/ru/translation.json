@@ -139,6 +139,14 @@
       "name": "Name"
     }
   },
+  "no_contracts": {
+    "title": "You don't have contracts yet",
+    "text": "Sign your first contract and start earning",
+    "btn": "Buy your first contract"
+  },
+  "recommended": {
+    "btn": "Buy contract"
+  },
   "modal": {
     "referral": {
       "title": "Use your referral link to\ninvite friends",

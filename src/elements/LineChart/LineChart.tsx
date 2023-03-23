@@ -3,7 +3,10 @@ import { ResponsiveContainer, XAxis, YAxis, AreaChart, Area } from 'recharts'
 import { LineChartStyles } from "./LineChart.Styles";
 
 export type LineChartProps = {
-  data: any[]
+  data: {
+    items: any[],
+    params: any
+  }
 } & React.HTMLAttributes<HTMLDivElement>
 
 const LineChart = ({ data }: LineChartProps) => {
@@ -11,7 +14,7 @@ const LineChart = ({ data }: LineChartProps) => {
     <LineChartStyles>
       <ResponsiveContainer>
         <AreaChart
-          data={data}
+          data={data.items}
           width={300}
           height={308}
           margin={{
@@ -29,17 +32,19 @@ const LineChart = ({ data }: LineChartProps) => {
             minTickGap={10}
           />
           <YAxis
-            dataKey="value"
             tickCount={6}
             scale="linear"
             axisLine={{stroke: '#5F698D', width: 4}}
             tickLine={true}
             fontSize="12px"
             tickFormatter={(val) => val}
-            orientation="right"
             tick={{ dx: 10, fill: '#5F698D', width: 4 }}
           />
-          <Area dataKey="value" type="monotone" stroke='#58E664' fill="url(#gradient)" strokeWidth={4} />
+          {
+            data.params.keys.map((key: string) => (
+              <Area key={key} dataKey={key} type="monotone" stroke={data.params[key].color} fill="url(#gradient)" strokeWidth={4} />
+            ))
+          }
         </AreaChart>
       </ResponsiveContainer>
     </LineChartStyles>

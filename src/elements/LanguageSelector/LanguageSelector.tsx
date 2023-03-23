@@ -1,6 +1,6 @@
 import { MenuItem, Input } from '@mui/material';
 import { ExpandMore } from '@mui/icons-material';
-import React, { useCallback, useState } from 'react';
+import React, { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import {LANGUAGES, LANGUAGES_SWITCHER} from '../../common/utils/i18n';
@@ -17,13 +17,11 @@ interface Props {
 const LanguageSelector: React.FC<Props> = (props: Props) => {
   const { className } = props;
   const { i18n } = useTranslation();
-  const [loading, setLoading] = useState(false);
 
   const changeLanguage = useCallback(
     (event: React.ChangeEvent<{ name?: string; value: unknown }>) => {
       const languageCode = typeof event.target.value === 'string' && event.target.value;
       if (!languageCode || LANGUAGE_CODES_LIST.indexOf(languageCode) < 0) return;
-      setLoading(true);
       i18n.changeLanguage(languageCode);
     },
     [i18n]
@@ -48,7 +46,7 @@ const LanguageSelector: React.FC<Props> = (props: Props) => {
       name="age"
       IconComponent={ExpandMore}
       MenuProps={menuProps}
-      value={loading ? '...' : i18n.language}
+      value={i18n.language}
       renderValue={(language: string) => <><i className={`langSwitcher-lang__flag -${language}`} /><span className="langSwitcher-lang__value">{LANGUAGES_SWITCHER[language]}</span></>}
       onChange={changeLanguage}
       input={<Input disableUnderline />}

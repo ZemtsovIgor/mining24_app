@@ -2,16 +2,21 @@
   "error": {
     "network": {
       "404": "Network error"
-    }
+    },
+    "INCORRECT_EMAIL_OR_PASSWORD": "Incorrect login or password"
+  },
+  "common": {
+    "copy": "Copy"
   },
   "login": {
     "page": {
-      "titles": {
-        "title": "Login"
+      "title": "Login",
+      "texts": {
+        "text": "Not registered yet?"
       },
       "form": {
         "email": {
-          "placeholder": "Your email",
+          "placeholder": "Email",
           "errors": {
             "empty": "Enter email",
             "valid": "Please enter a valid email"
@@ -21,7 +26,7 @@
           "placeholder": "Password",
           "errors": {
             "empty": "Enter password",
-            "valid": "Please enter a valid email"
+            "valid": "At least 8 characters\nMin one lowercase and uppercase latter\nMin one nubmer"
           }
         }
       }
@@ -30,24 +35,25 @@
       "login": "Login"
     },
     "link": {
-      "forgot_password": "Forgot your password?",
-      "registration": "Registration"
+      "forgot_password": "Forgot password",
+      "registration": "Register"
     }
   },
   "registration": {
     "page": {
       "title": "Registration",
+      "texts": {
+        "text": "You have account?"
+      },
       "form": {
         "email": {
-          "label": "Email",
-          "placeholder": "your@mail.com",
+          "placeholder": "Email",
           "errors": {
             "empty": "Enter email",
             "valid": "Please enter a valid email"
           }
         },
         "password": {
-          "label": "Password",
           "placeholder": "Password",
           "errors": {
             "empty": "Enter password",
@@ -61,11 +67,105 @@
             "empty": "Enter password",
             "not_match": "Passwords don't match"
           }
+        },
+        "hint": {
+          "one": "At least 8 characters",
+          "two": "Min one lowercase and uppercase latter",
+          "three": "Min one nubmer"
         }
       }
     },
     "btns": {
       "registration": "Registration"
+    },
+    "link": {
+      "login": "Login"
+    }
+  },
+  "forgotPassword": {
+    "page": {
+      "title": "Forgot password",
+      "texts": {
+        "text": "Not registered yet?",
+        "new_password": "New password has been sent to your email"
+      },
+      "form": {
+        "email": {
+          "placeholder": "Email",
+          "errors": {
+            "empty": "Enter email",
+            "valid": "Please enter a valid email"
+          }
+        }
+      }
+    },
+    "btns": {
+      "reset_password": "Reset password ",
+      "cancel": "Cancel",
+      "login": "Login"
+    },
+    "link": {
+      "registration": "Register"
+    }
+  },
+  "navBar": {
+    "dashboard": "Dashboard",
+    "contract": "Contract",
+    "shop": "Shop",
+    "statistics": "Statistics",
+    "transactions": "Transactions",
+    "referrals": "Referrals",
+    "settings": "Settings",
+    "profile": "Profile",
+    "simple": "Contract «Simple»",
+    "medium": "Contract «Medium»",
+    "profi": "Contract «Profi»"
+  },
+  "wallet": {
+    "btns": {
+      "refill": "Refill",
+      "withdraw": "Withdraw"
+    }
+  },
+  "share": {
+    "texts": {
+      "share": "Share with friends",
+      "meeting": "For every meeting",
+      "reward": "You receive a reward"
+    }
+  },
+  "contracts": {
+    "header": {
+      "name": "Name"
+    }
+  },
+  "no_contracts": {
+    "title": "You don't have contracts yet",
+    "text": "Sign your first contract and start earning",
+    "btn": "Buy your first contract"
+  },
+  "recommended": {
+    "btn": "Buy contract"
+  },
+  "statistics": {
+    "title": "Recommended to you"
+  },
+  "modal": {
+    "referral": {
+      "title": "Use your referral link to\ninvite friends",
+      "description": "Share with your friends on social networks and\nget rewarded after a friend makes his first\ncontract"
+    },
+    "canselContract": {
+      "title": "Cancel contract?"
+    },
+    "needVerify": {
+      "title": "You need to verify your\nprofile to continue",
+      "description": "Verify your profile in settings",
+      "btn": "Verify profile"
+    },
+    "paid": {
+      "title": "Successfully paid",
+      "description": "The contract was added to your dashboard"
     }
   }
 }
