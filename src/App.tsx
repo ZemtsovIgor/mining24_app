@@ -15,6 +15,9 @@ import Contract from './pages/Contract/Contract';
 import ContractItem from './pages/Contract/ContractItem';
 import Shop from './pages/Shop/Shop';
 import Statistics from "./pages/Statistics/Statistics";
+import Transactions from "./pages/Transactions/Transactions";
+import Referrals from "./pages/Referrals/Referrals";
+import Settings from "./pages/Settings/Settings";
 
 function App() {
   return (
@@ -28,6 +31,9 @@ function App() {
         <PrivateRoutes exact path={PATHS.CONTRACT_ITEM} component={ContractItem} title="navBar.contract" />
         <PrivateRoutes exact path={PATHS.SHOP} component={Shop} title="navBar.shop" />
         <PrivateRoutes exact path={PATHS.STATISTICS} component={Statistics} title="navBar.statistics" />
+        <PrivateRoutes exact path={PATHS.TRANSACTIONS} component={Transactions} title="navBar.transactions" />
+        <PrivateRoutes exact path={PATHS.REFERRALS} component={Referrals} title="navBar.referrals" />
+        <PrivateRoutes exact path={PATHS.SETTINGS} component={Settings} title="navBar.settings" />
 
         <GuestRoutes
           exact

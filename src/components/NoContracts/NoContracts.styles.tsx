@@ -4,7 +4,7 @@ export const NoContractsWrapper: any = styled.div`
   background: var(--white);
   box-shadow: 0 4px 28px rgba(0, 0, 0, 0.03);
   border-radius: 10px;
-  padding: 32px;
+  padding: 32px 32px 28px 32px;
   
   .contracts {
     &__wrap {
@@ -13,7 +13,7 @@ export const NoContractsWrapper: any = styled.div`
     }
 
     &__container {
-      padding: 11px 17px 21px 30px;
+      padding: 0;
       width: 100%;
     }
 
@@ -28,6 +28,8 @@ export const NoContractsWrapper: any = styled.div`
     
     &__ref {
       text-align: left;
+      margin-left: 6px;
+      margin-top: 45px;
     }
 
     &__title {
@@ -37,19 +39,19 @@ export const NoContractsWrapper: any = styled.div`
       color: var(--black);
 
       &-wrap {
-        margin-bottom: 9px;
+        margin-bottom: 0;
       }
     }
 
     &__text {
       font-weight: 400;
-      font-size: 14px;
-      line-height: 24px;
+      font-size: 16px;
+      line-height: 32px;
       color: var(--black);
 
       &-wrap {
         display: flex;
-        margin-top: 20px;
+        margin-top: 0;
       }
     }
 
@@ -58,12 +60,12 @@ export const NoContractsWrapper: any = styled.div`
       font-weight: 700;
       font-size: 18px;
       line-height: 24px;
-      padding: 16px 24px;
+      padding: 10px 64px;
       border-radius: var(--border-radius);
       color: var(--white);
       
       &-wrap {
-        margin-top: 20px;
+        margin-top: 0;
       }
     }
   }
