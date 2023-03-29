@@ -9,6 +9,7 @@ export const SettingsContainer: any = styled.div`
       color: var(--black);
 
       &_wrap {
+        margin-bottom: 32px;
       }
     }
 
@@ -19,8 +20,20 @@ export const SettingsContainer: any = styled.div`
       color: var(--black);
 
       &_wrap {
-        margin-top: 32px;
         margin-bottom: 20px;
+      }
+    }
+  }
+  
+  .settings {
+    &-form {
+      margin-bottom: 56px;
+    }
+    
+    &__button {
+      width: 100%;
+      &-wrap {
+        
       }
     }
   }

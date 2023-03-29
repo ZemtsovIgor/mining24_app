@@ -8,7 +8,9 @@ import { Logo } from './Logo/Logo';
 import { Loader } from './Loader/Loader';
 import { MainContent } from './MainContent/MainContent';
 import { Modal } from './Modal/Modal';
+import PhoneInput from './PhoneInput/PhoneInput';
 import { ReferralInput } from './ReferralInput/ReferralInput';
+import { Select } from './Select/Select';
 import { SocialNetworks } from './SocialNetworks/SocialNetworks';
 import { Title } from './Title/Title';
 
@@ -23,7 +25,9 @@ export {
   Loader,
   MainContent,
   Modal,
+  PhoneInput,
   ReferralInput,
+  Select,
   SocialNetworks,
   Title,
 };

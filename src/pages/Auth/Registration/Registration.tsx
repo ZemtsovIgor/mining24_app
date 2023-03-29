@@ -41,7 +41,6 @@ const Registration: React.FC<RegistrationProps> = (props: RegistrationProps) => 
   });
   const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
-
   let getFormErrors: (data: { [p: string]: string }) => RegistrationParams;
   getFormErrors = (data: { [key: string]: string }) => {
     const {email, password, confPassword} = data;

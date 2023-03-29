@@ -18,6 +18,7 @@ import Statistics from "./pages/Statistics/Statistics";
 import Transactions from "./pages/Transactions/Transactions";
 import Referrals from "./pages/Referrals/Referrals";
 import Settings from "./pages/Settings/Settings";
+import Profile from "./pages/Profile/Profile";
 
 function App() {
   return (
@@ -34,12 +35,13 @@ function App() {
         <PrivateRoutes exact path={PATHS.TRANSACTIONS} component={Transactions} title="navBar.transactions" />
         <PrivateRoutes exact path={PATHS.REFERRALS} component={Referrals} title="navBar.referrals" />
         <PrivateRoutes exact path={PATHS.SETTINGS} component={Settings} title="navBar.settings" />
+        <PrivateRoutes exact path={PATHS.PROFILE} component={Profile} title="navBar.profile" />
 
         <GuestRoutes
           exact
           path={PATHS.LOGIN}
           component={Login}
-          title="login.page.titles.title"
+          title="login.page.title"
         />
         <GuestRoutes
           exact

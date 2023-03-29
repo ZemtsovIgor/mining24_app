@@ -150,6 +150,99 @@
   "statistics": {
     "title": "Recommended to you"
   },
+  "settings": {
+    "page": {
+      "title": "Settings",
+      "texts": {
+        "account": "Account",
+        "changePassword": "Change password",
+        "changeEmail": "Change email",
+        "finance": "Finance"
+      },
+      "form": {
+        "password": {
+          "placeholder": "Current password",
+          "errors": {
+            "empty": "Enter password",
+            "valid": "At least 8 characters\nMin one lowercase and uppercase latter\nMin one nubmer"
+          }
+        },
+        "newPassword": {
+          "placeholder": "New password",
+          "errors": {
+            "empty": "Enter password",
+            "valid": "At least 8 characters\nMin one lowercase and uppercase latter\nMin one nubmer"
+          }
+        },
+        "confPassword": {
+          "placeholder": "Repeat new password",
+          "errors": {
+            "empty": "Enter password",
+            "not_match": "Passwords don't match"
+          }
+        },
+        "email": {
+          "placeholder": "Email",
+          "errors": {
+            "empty": "Enter email",
+            "valid": "Please enter a valid email"
+          }
+        },
+        "address": {
+          "placeholder": "Payout address",
+          "errors": {
+            "empty": "Enter address",
+            "valid": "Please enter a valid address"
+          }
+        },
+        "sum": {
+          "placeholder": "Set threshold sum",
+          "errors": {
+            "empty": "Enter sum",
+            "valid": "Please enter a valid sum"
+          }
+        }
+      }
+    },
+    "btns": {
+      "save": "Save"
+    }
+  },
+  "profile": {
+    "page": {
+      "form": {
+        "fullName": {
+          "placeholder": "Full name"
+        },
+        "dateOfBirth": {
+          "placeholder": "Date of birth"
+        },
+        "email": {
+          "placeholder": "Email",
+          "errors": {
+            "valid": "Please enter a valid email"
+          }
+        },
+        "country": {
+          "placeholder": "Country"
+        },
+        "phone": {
+          "placeholder": "Phone number",
+          "errors": {
+            "valid": "Please enter a valid phone number"
+          }
+        }
+      },
+      "verification": {
+        "title": "Video verification",
+        "notVerifyed": "Your profile is not verified. To use all the services, you should pass video verification"
+      }
+    },
+    "btns": {
+      "save": "Save",
+      "verify": "Verify profile"
+    }
+  },
   "modal": {
     "referral": {
       "title": "Use your referral link to\ninvite friends",
