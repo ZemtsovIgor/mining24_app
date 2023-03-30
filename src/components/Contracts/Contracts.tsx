@@ -55,16 +55,19 @@ const Contracts: React.FC<Props> = (props: Props) => {
                 className="contracts-body__row"
               >
                 <div className="contracts-body__cell">
-                  <span className="contracts-body__cell_text">{item.name}</span>
+                  <span className="contracts-body__cell_text -title">{item.name}</span>
                 </div>
                 <div className="contracts-body__cell">
                   <span className="contracts-body__cell_text">{item.hashrate} H/s</span>
+                  <span className="contracts-body__cell_label">Hashrate</span>
                 </div>
                 <div className="contracts-body__cell">
                   <span className="contracts-body__cell_text">{item.until}</span>
+                  <span className="contracts-body__cell_label">Until</span>
                 </div>
                 <div className="contracts-body__cell">
                   <span className="contracts-body__cell_text">{item.earned}</span>
+                  <span className="contracts-body__cell_label">Earned</span>
                 </div>
                 <div className="contracts-body__cell">
                   <div className="contracts-body__cell_chart">

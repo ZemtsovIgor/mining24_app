@@ -129,14 +129,14 @@ const Registration: React.FC<LogInProps> = (props: LogInProps) => {
 
   return (
     <LoginStyles className='login'>
-      <div className="login__image" />
+      <div className="login__image -hidden-small" />
       <div className="login__container">
         {error && (
           <div className="error__text-wrap">
             <p className="error__text">{t(`error.${error}`)}</p>
           </div>
         )}
-        <div className="login__box">
+        <div className={`login__box ${error ? '-error' : ''}`}>
           <Title className='login__title'>
             {t('login.page.title')}
           </Title>

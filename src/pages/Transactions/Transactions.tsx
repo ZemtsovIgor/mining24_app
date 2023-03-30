@@ -98,7 +98,7 @@ const data:any = {
   ]
 };
 
-const hasStat = false;
+const hasStat = true;
 
 const Transactions: React.FC = () => {
   const { t } = useTranslation();
@@ -108,6 +108,9 @@ const Transactions: React.FC = () => {
     <MainContent className="content-main home-page">
       <Container>
         <TransactionsContainer>
+          <div className="home-title_wrap -big">
+            <span className="home-title">Transactions</span>
+          </div>
           {
             hasStat ? (
               <>

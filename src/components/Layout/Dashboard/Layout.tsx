@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Header from '../../Header';
 import { Content, MainContainer, SiteWrapper } from './Layout.Styles';
 import Sidebar from '../../Sidebar/Sidebar';
+import MobileMenu from '../../MobileMenu/MobileMenu';
 import { Alert } from '../../../elements';
 import { AppStateType } from '../../../store';
 import { setAlert } from '../../../store/loadingsErrors/actions';
@@ -30,6 +31,7 @@ const Layout: React.FC<Props> = (props: Props) => {
           {children}
         </Content>
       </MainContainer>
+      <MobileMenu />
 
       <Alert alert={alert} pathname={children?.props?.location?.pathname} setAlert={setAlert} />
     </SiteWrapper>

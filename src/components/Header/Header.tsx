@@ -5,7 +5,8 @@ import { useLocation } from 'react-router-dom';
 import { HeaderWrapper } from './Header.styles';
 import {useTranslation} from "react-i18next";
 
-import { LanguageSelector } from '../../elements';
+import {LanguageSelector, Logo} from '../../elements';
+import {PATHS} from "../../const/paths.constants";
 
 
 const Header: React.FC = () => {
@@ -24,6 +25,10 @@ const Header: React.FC = () => {
   return (
     <HeaderWrapper className='header'>
       <div className="header-wrap">
+        <Logo className="header-logo" to={PATHS.DASHBOARD}>
+          <img src="/img/main/logo.svg" alt="mining24" />
+        </Logo>
+
         <div className="header-title__wrap">
           <span className="header-title">{t(`navBar.${array[array.length - 1].route}`)}</span>
         </div>

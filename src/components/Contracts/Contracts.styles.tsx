@@ -45,14 +45,6 @@ export const ContractsWrapper: any = styled.div`
         border-bottom: 1px solid #EFEFEF;
 
         grid-template-columns: 1.1fr 1.1fr 1.1fr 1.1fr 0.8fr;
-
-        @media screen and (max-width: 900px) {
-          width: 770px;
-          grid-template-columns: 1.1fr 1.1fr 1.1fr 1.1fr 0.8fr;
-          > *:first-child {
-            display: none;
-          }
-        }
       }
     }
 
@@ -69,18 +61,11 @@ export const ContractsWrapper: any = styled.div`
         align-items: center;
 
         grid-template-columns: 1.1fr 1.1fr 1.1fr 1.1fr 0.8fr;
-
-        @media screen and (max-width: 900px) {
-          width: 770px;
-          grid-template-columns: 1.1fr 1.1fr 1.1fr 1.1fr 0.8fr;
-          > *:first-child {
-            display: none;
-          }
-        }
       }
 
       &__cell {
         display: flex;
+        flex-direction: column;
 
         &_text {
           font-weight: 500;
@@ -88,12 +73,89 @@ export const ContractsWrapper: any = styled.div`
           line-height: 24px;
           color: var(--black);
         }
+        
+        &_label {
+          display: none;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 24px;
+          color: #060931;
+        }
       }
 
 
 
       &_chart {
 
+      }
+    }
+  }
+
+  @media only screen and (max-width: 48.1em) {
+    margin-bottom: 2px;
+    
+    .contracts {
+      padding: 15px 16px 0;
+      
+      &-header {
+        &__wrap {
+          display: none;
+        }
+      }
+      
+      &-body {
+        &__cell {
+          &:first-child {
+            grid-area: name;
+          }
+          
+          &:nth-child(2) {
+            grid-area: hashrate;
+          }
+
+          &:nth-child(3) {
+            grid-area: until;
+          }
+
+          &:nth-child(4) {
+            grid-area: earned;
+          }
+
+          &:last-child {
+            grid-area: statistics;
+          }
+
+          &_text {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            
+            &.-title {
+              font-weight: 600;
+              font-size: 16px;
+              line-height: 24px;
+            }
+          }
+
+          &_label {
+            display: block;
+          }
+        }
+        
+        &__row {
+          grid-template-columns: 5fr 1fr 1fr 1fr 5fr;
+          grid-template-areas:
+            'name name name name name'
+            'hashrate until earned earned earned'
+            'statistics statistics statistics statistics statistics';
+          border-bottom: 1px solid #E2E4EB;
+          padding: 4px 12px 24px;
+          margin: 7px 0 6px;
+
+          &:last-child {
+            border-bottom: 0;
+          }
+        }
       }
     }
   }

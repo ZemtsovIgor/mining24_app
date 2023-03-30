@@ -15,32 +15,40 @@ const data:any = {
   hashrate: '19',
   until: '31/12/2022',
   earned: '8 583 399',
-  statistics: [
-    {
-      time: 1674231959,
-      value: 0.00001,
+  statistics: {
+    params: {
+      keys: ['hashrate'],
+      hashrate: {
+        color: '#58E664'
+      }
     },
-    {
-      time: 1674241959,
-      value: 0.00004,
-    },
-    {
-      time: 1674251959,
-      value: 0.00002,
-    },
-    {
-      time: 1674261959,
-      value: 0.00007,
-    },
-    {
-      time: 1674271959,
-      value: 0.00004,
-    },
-    {
-      time: 1674281959,
-      value: 0.000010,
-    }
-  ]
+    items: [
+      {
+        time: '2022-10-20',
+        hashrate: 0.00001,
+      },
+      {
+        time: '2022-11-20',
+        hashrate: 0.00004,
+      },
+      {
+        time: '2022-12-20',
+        hashrate: 0.00002,
+      },
+      {
+        time: '2023-01-20',
+        hashrate: 0.00007,
+      },
+      {
+        time: '2023-02-20',
+        hashrate: 0.00004,
+      },
+      {
+        time: '2023-03-20',
+        hashrate: 0.000010,
+      }
+    ]
+  }
 };
 
 const ContractItem: React.FC = () => {

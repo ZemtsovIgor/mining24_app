@@ -137,6 +137,9 @@ const Statistics: React.FC = () => {
     <MainContent className="content-main home-page">
       <Container>
         <StatisticsContainer>
+          <div className="home-title_wrap -big">
+            <span className="home-title">Statistics</span>
+          </div>
           {
             hasStat ? (
               <div className="chart-wrap">
@@ -162,7 +165,7 @@ const Statistics: React.FC = () => {
               <>
                 <NoContracts />
                 <div className="home-title_wrap">
-                  <span className="home-title">{t('statistics.title')}</span>
+                  <span className="home-title">Available for you</span>
                 </div>
                 <Recommended items={data.items} />
               </>

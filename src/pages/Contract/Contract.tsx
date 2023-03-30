@@ -6,6 +6,7 @@ import {
   MainContent,
 } from '../../elements';
 import Contracts from '../../components/Contracts';
+import {ContractContainer} from "./Contract.Styles";
 
 const data:any = {
   contracts: {
@@ -115,7 +116,12 @@ const Contract: React.FC = () => {
   return (
     <MainContent className="content-main home-page">
       <Container>
-        <Contracts items={data.contracts.items} />
+        <ContractContainer>
+          <div className="home-title_wrap -big">
+            <span className="home-title">Contract</span>
+          </div>
+          <Contracts items={data.contracts.items} />
+        </ContractContainer>
       </Container>
     </MainContent>
   );

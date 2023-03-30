@@ -45,14 +45,6 @@ export const ReferralsWrapper: any = styled.div`
         border-bottom: 1px solid #EFEFEF;
 
         grid-template-columns: 1fr 1fr 1fr;
-
-        @media screen and (max-width: 900px) {
-          width: 770px;
-          grid-template-columns: 1fr 1fr 1fr;
-          > *:first-child {
-            display: none;
-          }
-        }
       }
     }
 
@@ -69,14 +61,6 @@ export const ReferralsWrapper: any = styled.div`
         align-items: center;
 
         grid-template-columns: 1fr 1fr 1fr;
-
-        @media screen and (max-width: 900px) {
-          width: 770px;
-          grid-template-columns: 1fr 1fr 1fr;
-          > *:first-child {
-            display: none;
-          }
-        }
       }
 
       &__cell {
@@ -87,6 +71,71 @@ export const ReferralsWrapper: any = styled.div`
           font-size: 14px;
           line-height: 24px;
           color: var(--black);
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 48.1em) {
+    margin-bottom: 2px;
+
+    .referrals {
+      padding: 9px 4px 6px;
+
+      &-header {
+        &__wrap {
+          display: none;
+        }
+      }
+
+      &-body {
+        &__cell {
+          &:first-child {
+            grid-area: email;
+          }
+
+          &:nth-child(2) {
+            grid-area: date;
+            justify-content: flex-end;
+          }
+
+          &:last-child {
+            grid-area: sum;
+          }
+          
+          &_text {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+
+            &.-title {
+              font-weight: 600;
+              font-size: 16px;
+              line-height: 24px;
+            }
+
+            &.-date {
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 24px;
+              color: #8A92AD;
+            }
+          }
+        }
+
+        &__row {
+          grid-template-columns: 1fr 1fr 2fr;
+          grid-template-areas:
+            'email email date'
+            'sum sum sum';
+          border-bottom: 1px solid #E2E4EB;
+          padding: 12px 12px 14px;
+          margin: 0;
+          gap: 8px;
+
+          &:last-child {
+            border-bottom: 0;
+          }
         }
       }
     }

@@ -18,6 +18,12 @@ export const HeaderWrapper: any = styled.header`
       width: 100%;
     }
     
+    &-logo {
+      display: none;
+      position: relative;
+      width: 110px;
+    }
+    
     &-title {
       font-weight: 700;
       font-size: 32px;
@@ -46,6 +52,29 @@ export const HeaderWrapper: any = styled.header`
       
       &__wrap {
 
+      }
+    }
+  }
+
+  @media only screen and (max-width: 48.1em) { //768px
+    background: var(--white);
+    padding: 20px 19px 13px;
+    
+    .header {
+      &-logo {
+        display: block;
+      }
+      
+      &-title {
+        &__wrap {
+          display: none;
+        }
+      }
+      
+      &-lang {
+        &__wrap {
+          display: none;
+        }
       }
     }
   }

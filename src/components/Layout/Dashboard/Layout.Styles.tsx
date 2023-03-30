@@ -17,4 +17,8 @@ export const Content: any = styled.div`
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
+
+  @media only screen and (max-width: 48.1em) {
+    width: 100%;
+  }
 `;

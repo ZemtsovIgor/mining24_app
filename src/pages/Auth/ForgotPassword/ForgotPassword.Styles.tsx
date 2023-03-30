@@ -5,6 +5,7 @@ export const ForgotPasswordStyles: any = styled.div`
   position: relative;
   min-height: 100vh;
   display: flex;
+  font-family: var(--montserrat);
 
   .forgotPassword {
     &__image {
@@ -117,6 +118,55 @@ export const ForgotPasswordStyles: any = styled.div`
       border-radius: var(--border-radius);
       text-align: center;
       top: 40px;
+    }
+  }
+
+  @media only screen and (max-width: 48.1em) { //768px
+    .forgotPassword {
+      &__container {
+      }
+
+      &__box {
+        padding: 0 17px;
+        margin-top: -260px;
+      }
+
+      &__title {
+        margin: 0 0 16px;
+        font-size: 28px;
+        line-height: 36px;
+      }
+
+      &__text {
+        &-wrap {
+          margin-bottom: 20px;
+        }
+      }
+
+      &__button {
+        &-wrap {
+          margin-top: 12px;
+          flex-direction: column;
+          gap: 8px;
+        }
+      }
+
+      &__links {
+        margin-top: 16px;
+      }
+    }
+
+    .error {
+      &__text {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+
+        &-wrap {
+          width: calc(100% - 32px);
+          top: 16px;
+        }
+      }
     }
   }
 `;

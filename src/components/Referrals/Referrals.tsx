@@ -41,13 +41,13 @@ const Referrals: React.FC<Props> = (props: Props) => {
                 className="referrals-body__row"
               >
                 <div className="referrals-body__cell">
-                  <span className="referrals-body__cell_text">{item.email}</span>
+                  <span className="referrals-body__cell_text -date">{item.email}</span>
                 </div>
                 <div className="referrals-body__cell">
-                  <span className="referrals-body__cell_text">{item.date}</span>
+                  <span className="referrals-body__cell_text -date">{item.date}</span>
                 </div>
                 <div className="referrals-body__cell">
-                  <span className="referrals-body__cell_text">{item.sum}</span>
+                  <span className="referrals-body__cell_text -title">{item.sum}</span>
                 </div>
               </div>
             ))

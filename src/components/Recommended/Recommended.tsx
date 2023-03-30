@@ -19,7 +19,7 @@ const Recommended: React.FC<Props> = (props: Props) => {
           items.map((item:any, index: number) => (
             <div
               key={`available-${index + 1}`}
-              className={`cell grid-x small-4 xlarge-4 available-card -${item.color} -${item.type}`}
+              className={`cell grid-x small-8 xlarge-4 available-card -${item.color} -${item.type}`}
             >
               <div className="cell available-card__content">
                 <span className="available-card__title">{item.title}</span>

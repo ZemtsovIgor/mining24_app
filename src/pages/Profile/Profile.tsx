@@ -157,6 +157,9 @@ const Profile: React.FC<ProfileProps> = (props: ProfileProps) => {
     <MainContent className="content-main home-page">
       <Container>
         <ProfileContainer>
+          <div className="home-title_wrap -big">
+            <span className="home-title">Profile</span>
+          </div>
           <div className="grid-x grid-margin-x profile">
             <div className="cell small-12 xlarge-5">
               <form className="profile-form" onSubmit={onSubmit}>

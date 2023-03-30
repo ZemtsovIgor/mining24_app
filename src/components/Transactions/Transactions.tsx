@@ -41,10 +41,10 @@ const Transactions: React.FC<Props> = (props: Props) => {
                 className="transactions-body__row"
               >
                 <div className="transactions-body__cell">
-                  <span className="transactions-body__cell_text">{item.date}</span>
+                  <span className="transactions-body__cell_text -date">{item.date}</span>
                 </div>
                 <div className="transactions-body__cell">
-                  <span className="transactions-body__cell_text">{item.sum}</span>
+                  <span className="transactions-body__cell_text -title">{item.sum}</span>
                 </div>
                 <div className="transactions-body__cell">
                   <span className="transactions-body__cell_text">{item.desc}</span>

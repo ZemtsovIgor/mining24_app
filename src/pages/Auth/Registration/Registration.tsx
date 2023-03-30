@@ -141,7 +141,7 @@ const Registration: React.FC<RegistrationProps> = (props: RegistrationProps) => 
 
   return (
     <RegistrationStyles className='registration'>
-      <div className="registration__image" />
+      <div className="registration__image -hidden-small" />
       <div className="registration__container">
         {error && (
           <div className="error__text-wrap">

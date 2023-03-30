@@ -17,6 +17,10 @@ export const HomeContainer: any = styled.div`
         margin-bottom: 24px;
       }
     }
+    
+    &.-big {
+      
+    }
   }
   
   .wallet {
@@ -139,6 +143,99 @@ export const HomeContainer: any = styled.div`
       &__input {
         &_wrap {
           
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 48.1em) { //768px
+    .home {
+      &-title {
+        &_wrap {
+          margin-top: 32px;
+          margin-bottom: 15px;
+        }
+      }
+
+      &.-big {
+
+      }
+    }
+    
+    .home-title_wrap {
+      &.-big {
+        margin-top: 8px;
+        margin-bottom: 16px;
+        & .home-title {
+          font-weight: 700;
+          font-size: 28px;
+          line-height: 36px;
+          color: var(--black);
+        }
+      }
+    }
+    
+    .wallet {
+      gap: 16px;
+      
+      &-refill {
+        padding: 24px 16px;
+        
+        &__balance {
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 32px;
+          
+          &_wrap {
+            display: flex;
+            align-items: center;
+          }
+
+          &_icon {
+            margin-right: 7px;
+            margin-left: 4px;
+          }
+        }
+        
+        &__btn {
+          padding: 12px 9px;
+        }
+      }
+      
+      &-share {
+        &__container {
+          flex: 1;
+          padding: 25px 16px 11px;
+        }
+        
+        &__image {
+          width: 71%;
+          &_wrap {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+
+        &__rewards {
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 16px;
+          color: var(--black);
+
+          &_wrap {
+            margin-bottom: 17px;
+          }
+        }
+
+        &__ref {
+          padding-top: 24px;
+        }
+
+        &__icon {
+          width: 16px;
+          margin: 0 11px;
         }
       }
     }

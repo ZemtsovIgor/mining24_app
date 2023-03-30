@@ -126,4 +126,40 @@ export const RecommendedWrapper: any = styled.div`
       }
     }
   }
+
+  @media only screen and (max-width: 48.1em) { //768px
+    .available {
+      &-card {
+        flex: 0 0 calc(66.66667% - 1rem);
+        background-image: none!important;
+        
+        &__content {
+          padding: 18px 16px 9px;
+        }
+
+        &__title {
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 32px;
+        }
+        
+        &__list {
+          margin-bottom: 15px;
+          
+          &_item {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+          }
+        }
+        
+        &__price {
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 28px;
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
 `;

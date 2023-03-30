@@ -45,14 +45,6 @@ export const TransactionsWrapper: any = styled.div`
         border-bottom: 1px solid #EFEFEF;
 
         grid-template-columns: 1fr 1fr 8fr;
-
-        @media screen and (max-width: 900px) {
-          width: 770px;
-          grid-template-columns: 1fr 1fr 8fr;
-          > *:first-child {
-            display: none;
-          }
-        }
       }
     }
 
@@ -69,14 +61,6 @@ export const TransactionsWrapper: any = styled.div`
         align-items: center;
 
         grid-template-columns: 1fr 1fr 8fr;
-
-        @media screen and (max-width: 900px) {
-          width: 770px;
-          grid-template-columns: 1fr 1fr 8fr;
-          > *:first-child {
-            display: none;
-          }
-        }
       }
 
       &__cell {
@@ -87,6 +71,55 @@ export const TransactionsWrapper: any = styled.div`
           font-size: 14px;
           line-height: 24px;
           color: var(--black);
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 48.1em) {
+    margin-bottom: 2px;
+
+    .transactions {
+      padding: 9px 4px 0;
+
+      &-header {
+        &__wrap {
+          display: none;
+        }
+      }
+
+      &-body {
+        &__cell {
+          &_text {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+
+            &.-title {
+              font-weight: 600;
+              font-size: 16px;
+              line-height: 24px;
+            }
+            
+            &.-date {
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 24px;
+              color: #8A92AD;
+            }
+          }
+        }
+
+        &__row {
+          grid-template-columns: 1fr;
+          border-bottom: 1px solid #E2E4EB;
+          padding: 12px 12px 18px;
+          margin: 0;
+          gap: 8px;
+
+          &:last-child {
+            border-bottom: 0;
+          }
         }
       }
     }

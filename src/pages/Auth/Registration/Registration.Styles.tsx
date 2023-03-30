@@ -4,6 +4,7 @@ export const RegistrationStyles: any = styled.div`
   position: relative;
   min-height: 100vh;
   display: flex;
+  font-family: var(--montserrat);
 
   .registration {
     &__image {
@@ -126,6 +127,65 @@ export const RegistrationStyles: any = styled.div`
       border-radius: var(--border-radius);
       text-align: center;
       top: 40px;
+    }
+  }
+
+  @media only screen and (max-width: 48.1em) { //768px
+    .registration {
+      &__container {
+      }
+
+      &__box {
+        padding: 0 17px;
+        margin-top: -68px;
+      }
+
+      &__title {
+        margin: 0 0 16px;
+        font-size: 28px;
+        line-height: 36px;
+      }
+
+      &__text {
+        &-wrap {
+          margin-bottom: 20px;
+        }
+      }
+
+      &__button {
+        &-wrap {
+          margin-top: 12px;
+        }
+      }
+
+      &__links {
+        margin-top: 16px;
+      }
+
+      &__hint {
+        margin-top: -3px;
+        margin-bottom: 7px;
+        
+        &-item {
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 16px;
+          margin: 7px 0;
+        }
+      }
+    }
+
+    .error {
+      &__text {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+
+        &-wrap {
+          width: calc(100% - 32px);
+          top: 16px;
+        }
+      }
     }
   }
 `;

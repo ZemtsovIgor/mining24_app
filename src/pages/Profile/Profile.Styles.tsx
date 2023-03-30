@@ -54,4 +54,33 @@ export const ProfileContainer: any = styled.div`
       }
     }
   }
+
+  @media only screen and (max-width: 48.1em) {
+    .home {
+      &-title {
+        &_wrap {
+          margin-top: 25px;
+          margin-bottom: 15px;
+        }
+      }
+
+      &.-big {
+
+      }
+    }
+
+    .home-title_wrap {
+      &.-big {
+        margin-top: 8px;
+        margin-bottom: 16px;
+
+        & .home-title {
+          font-weight: 700;
+          font-size: 28px;
+          line-height: 36px;
+          color: var(--black);
+        }
+      }
+    }
+  }
 `;

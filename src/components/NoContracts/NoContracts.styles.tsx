@@ -69,4 +69,68 @@ export const NoContractsWrapper: any = styled.div`
       }
     }
   }
+
+  @media only screen and (max-width: 48.1em) {
+    flex: 1;
+    padding: 19px 10px 19px;
+    .contracts {
+      
+      &__container {
+        flex: 1;
+      }
+      
+      &__image {
+        width: 97%;
+        &_wrap {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      &__rewards {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: var(--black);
+
+        &_wrap {
+          margin-bottom: 17px;
+        }
+      }
+
+      &__ref {
+        margin-top: 15px;
+      }
+      
+      &__title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+        
+        &-wrap {
+        }
+      }
+
+      &__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        margin-top: 8px;
+
+        &-wrap {
+        }
+      }
+      
+      &__btn {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+        padding: 12px 10px;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
 `;

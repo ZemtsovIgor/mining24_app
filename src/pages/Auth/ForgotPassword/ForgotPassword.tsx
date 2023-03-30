@@ -112,7 +112,7 @@ const ForgotPassword: React.FC<ForgotPasswordProps> = (props: ForgotPasswordProp
 
   return (
     <ForgotPasswordStyles className='forgotPassword'>
-      <div className="forgotPassword__image" />
+      <div className="forgotPassword__image -hidden-small" />
       <div className="forgotPassword__container">
         {error && (
           <div className="forgotPassword__text-wrap">

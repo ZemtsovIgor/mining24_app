@@ -23,6 +23,10 @@ export const SidebarWrapper: any = styled.aside`
     position: relative;
     width: 160px;
   }
+
+  @media only screen and (max-width: 48.1em) { //768px
+    display: none;
+  }
 `;
 
 export const Menu: any = styled.nav`

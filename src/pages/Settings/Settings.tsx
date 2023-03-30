@@ -139,6 +139,9 @@ const Settings: React.FC<SettingsProps> = (props: SettingsProps) => {
     <MainContent className="content-main home-page">
       <Container>
         <SettingsContainer>
+          <div className="home-title_wrap -big">
+            <span className="home-title">Settings</span>
+          </div>
           <div className="grid-x settings">
             <div className="cell small-12 xlarge-5">
               <div className="home-title_wrap">

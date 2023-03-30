@@ -91,7 +91,7 @@ export const Input: React.FC<Props> = (props: Props) => {
         }
       </FormControlInputWrap>
 
-      <FormControlInputError>{t(`${error}`)}</FormControlInputError>
+      <FormControlInputError className={`${error ? '-show' : ''}`}>{t(`${error}`)}</FormControlInputError>
     </FormControl>
   );
 };
