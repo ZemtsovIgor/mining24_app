@@ -22,7 +22,7 @@ export const RecommendedWrapper: any = styled.div`
     &-card {
       border-radius: 8px;
       margin-bottom: 1rem;
-      flex: 0 0 calc(33.33333% - 1rem);
+      flex: 0 0 calc(32.5% - 1rem);
 
       &__content {
         padding: 24px 24px 16px;

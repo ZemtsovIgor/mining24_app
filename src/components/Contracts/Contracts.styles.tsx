@@ -6,7 +6,7 @@ export const ContractsWrapper: any = styled.div`
   .contracts {
     background: var(--white);
     border-radius: 10px;
-    padding: 19px 20px;
+    padding: 4px 31px;
     width: 100%;
     flex-direction: column;
     gap: 13px;
@@ -34,7 +34,7 @@ export const ContractsWrapper: any = styled.div`
       line-height: 24px;
       color: var(--black);
       cursor: pointer;
-      height: 47px;
+      height: 49px;
       display: flex;
       align-items: center;
 
@@ -44,7 +44,7 @@ export const ContractsWrapper: any = styled.div`
         align-items: center;
         border-bottom: 1px solid #EFEFEF;
 
-        grid-template-columns: 1.1fr 1.1fr 1.1fr 1.1fr 0.8fr;
+        grid-template-columns: 1.8fr 1fr 1fr 1.1fr 1fr;
       }
     }
 
@@ -52,15 +52,16 @@ export const ContractsWrapper: any = styled.div`
       &__wrap {
         display: flex;
         flex-direction: column;
+        padding: 8px 0;
       }
 
       &__row {
         display: grid;
         grid-gap: 1em;
-        margin: 12px 0 11px;
+        margin: 7px 0;
         align-items: center;
 
-        grid-template-columns: 1.1fr 1.1fr 1.1fr 1.1fr 0.8fr;
+        grid-template-columns: 1.8fr 1fr 1fr 1.1fr 1fr;
       }
 
       &__cell {

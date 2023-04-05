@@ -15,6 +15,11 @@ export const HomeContainer: any = styled.div`
       &_wrap {
         margin-top: 40px;
         margin-bottom: 24px;
+        
+        &.-second {
+          margin-top: 48px;
+          margin-bottom: 20px;
+        }
       }
     }
     
@@ -28,7 +33,7 @@ export const HomeContainer: any = styled.div`
       background: var(--white);
       box-shadow: 0 4px 28px rgba(0, 0, 0, 0.03);
       border-radius: 10px;
-      padding: 32px 32px 18px;
+      padding: 26px 32px 26px;
       
       &__wrap {
         display: flex;
@@ -47,7 +52,8 @@ export const HomeContainer: any = styled.div`
         }
         
         &_icon {
-          margin-right: -3px;
+          margin-right: 5px;
+          margin-left: 4px;
         }
       }
       
@@ -65,7 +71,7 @@ export const HomeContainer: any = styled.div`
         line-height: 24px;
         color: #00CF3D;
         align-items: center;
-        padding: 9px;
+        padding: 12px;
         justify-content: center;
         
         &_icon {
@@ -99,6 +105,9 @@ export const HomeContainer: any = styled.div`
       }
       
       &__image {
+        width: 104%;
+        margin-top: 12px;
+        
         &_wrap {
           display: flex;
         }
@@ -108,7 +117,8 @@ export const HomeContainer: any = styled.div`
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding-top: 37px;
+        padding-top: 31px;
+        padding-left: 15px;
         width: 100%;
       }
       
@@ -119,7 +129,7 @@ export const HomeContainer: any = styled.div`
         color: var(--black);
         
         &_wrap {
-          margin-bottom: 9px;
+          margin-bottom: 8px;
         }
       }
       
@@ -132,7 +142,7 @@ export const HomeContainer: any = styled.div`
         &_wrap {
           display: flex;
           align-items: center;
-          margin-bottom: 10px;
+          margin-bottom: 15px;
         }
       }
       
@@ -154,6 +164,11 @@ export const HomeContainer: any = styled.div`
         &_wrap {
           margin-top: 32px;
           margin-bottom: 15px;
+
+          &.-second {
+            margin-top: 30px;
+            margin-bottom: 17px;
+          }
         }
       }
 
@@ -179,7 +194,7 @@ export const HomeContainer: any = styled.div`
       gap: 16px;
       
       &-refill {
-        padding: 24px 16px;
+        padding: 24px 16px 22px;
         
         &__balance {
           font-weight: 700;
@@ -205,7 +220,7 @@ export const HomeContainer: any = styled.div`
       &-share {
         &__container {
           flex: 1;
-          padding: 25px 16px 11px;
+          padding: 16px 16px 11px;
         }
         
         &__image {

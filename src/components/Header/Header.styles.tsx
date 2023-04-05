@@ -7,7 +7,7 @@ export const HeaderWrapper: any = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 19px 26px;
+  padding: 32px 39px 0;
   font-family: var(--montserrat);
   
   .header {
@@ -26,8 +26,8 @@ export const HeaderWrapper: any = styled.header`
     
     &-title {
       font-weight: 700;
-      font-size: 32px;
-      line-height: 44px;
+      font-size: 40px;
+      line-height: 56px;
       color: var(--black);
       
       &__wrap {
@@ -38,7 +38,7 @@ export const HeaderWrapper: any = styled.header`
     &-lang {
       &__wrap {
         margin-left: auto;
-        margin-right: 33px;
+        margin-right: 22px;
       }
     }
 
@@ -58,7 +58,7 @@ export const HeaderWrapper: any = styled.header`
 
   @media only screen and (max-width: 48.1em) { //768px
     background: var(--white);
-    padding: 20px 19px 13px;
+    padding: 20px 19px 16px;
     
     .header {
       &-logo {

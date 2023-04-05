@@ -12,6 +12,7 @@ export const ModalStyles: any = styled.div`
   background: rgba(155, 156, 157, 0.4);
   backdrop-filter: blur(20px);
   z-index: 9999;
+  font-family: var(--montserrat);
 
   .modal {
     &__dialog {
@@ -128,7 +129,46 @@ export const ModalStyles: any = styled.div`
     }
   }
 
-  @media (max-width: 992px) {
-  
+  @media only screen and (max-width: 48.1em) {
+    align-items: flex-end;
+    
+    .modal {
+      &__dialog {
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+        border-radius: 40px 40px 0 0;
+        width: 100%;
+        padding: 40px 30px 20px;
+      }
+
+      &__close {
+        &-btn {
+          right: 20px;
+          top: 20px;
+          width: 32px;
+          height: 32px;
+          background: #E2E4EB;
+          border-radius: 40px;
+        }
+      }
+
+      &-title {
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 36px;
+      }
+
+      &-text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        margin: 16px 0px 0px;
+      }
+      
+      &-social {
+        &__wrap {
+          margin-top: 32px;
+        }
+      }
+    }
   }
 `;

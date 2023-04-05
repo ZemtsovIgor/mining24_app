@@ -6,22 +6,21 @@ export const SidebarWrapper: any = styled.aside`
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  flex: 0 0 251px;
+  flex: 0 0 260px;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding: 30px;
+  padding: 31px 31px 22px;
   background: var(--white);
   min-height: 100vh;
-  border-right: 1px solid #EBECF1;
-  box-shadow: 0 4px 28px rgba(0, 0, 0, 0.01);
   font-family: var(--montserrat);
   
   .logo {
     display: block;
     position: relative;
-    width: 160px;
+    width: 168px;
+    padding-left: 6px;
   }
 
   @media only screen and (max-width: 48.1em) { //768px
@@ -34,7 +33,7 @@ export const Menu: any = styled.nav`
   height: 100%;
   display: flex;
   flex-direction: column;
-  
+  flex-grow: 1;
 `;
 
 export const MenuList: any = styled.ul`
@@ -42,7 +41,8 @@ export const MenuList: any = styled.ul`
   display: flex;
   flex-direction: column;
   padding-left: 3px;
-  
+  flex-grow: 1;
+
   .menu {
     &__line {
       width: 100%;
@@ -57,9 +57,28 @@ export const MenuListItem: any = styled.li`
   overflow: hidden;
 
   &:first-child {
-    margin-top: 59px  
+    margin-top: 54px  
   }
 
+  &:last-child {
+    margin-top: auto;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #EF2216;
+    
+    span {
+      margin-left: 17px;
+    }
+  }
 
   @media (max-width: 992px) {
     &:last-child {
@@ -72,7 +91,7 @@ export const MenuListLink: any = styled(NavLink)`
   position: relative;
   display: flex;
   align-items: center;
-  min-height: 50px;
+  min-height: 48px;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
@@ -87,7 +106,7 @@ export const MenuListLink: any = styled(NavLink)`
     width: 20px;
     min-width: 20px;
     fill: var(--black);
-    margin-right: 23px;
+    margin-right: 18px;
     transition: fill 0.3s ease-in-out, stroke 0.3s ease-in-out;
   }
 

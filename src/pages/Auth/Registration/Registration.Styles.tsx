@@ -24,14 +24,34 @@ export const RegistrationStyles: any = styled.div`
       width: 100%;
     }
 
+    &__lang {
+      &-wrap {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        padding: 2.5rem 2.8rem 0 2.8rem;
+      }
+    }
+
+    &__wrap {
+      display: flex;
+      position: relative;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      flex-grow: 1;
+      width: 100%;
+    }
+
     &__box {
       width: 100%;
       text-align: center;
       padding: 0 120px;
+      margin-top: 30px;
     }
 
     &__title {
-      margin: 0 0 20px;
+      margin: 0 0 14px;
     }
 
     &__text {
@@ -94,7 +114,7 @@ export const RegistrationStyles: any = styled.div`
       &-wrap {
         display: flex;
         justify-content: center;
-        margin-top: 24px;
+        margin-top: 22px;
       }
     }
 
@@ -102,7 +122,7 @@ export const RegistrationStyles: any = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-top: 19px;
+      margin-top: 14px;
 
       &-link {
         font-weight: 700;
@@ -126,7 +146,7 @@ export const RegistrationStyles: any = styled.div`
       background: var(--red);
       border-radius: var(--border-radius);
       text-align: center;
-      top: 40px;
+      top: 116px;
     }
   }
 

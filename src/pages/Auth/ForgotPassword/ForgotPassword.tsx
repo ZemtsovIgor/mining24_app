@@ -10,7 +10,7 @@ import {
   Button,
   Title,
   Input,
-  Loader,
+  Loader, LanguageSelector,
 } from '../../../elements';
 import { ForgotPasswordStyles } from './ForgotPassword.Styles';
 import { AppStateType } from '../../../store';
@@ -119,56 +119,61 @@ const ForgotPassword: React.FC<ForgotPasswordProps> = (props: ForgotPasswordProp
             <p className="forgotPassword__text">{t(`error.${error}`)}</p>
           </div>
         )}
-        <div className="forgotPassword__box">
-          <Title className='forgotPassword__title'>
-            {t('forgotPassword.page.title')}
-          </Title>
+        <div className="forgotPassword__lang-wrap -hidden-small">
+          <LanguageSelector />
+        </div>
+        <div className="forgotPassword__wrap">
+          <div className="forgotPassword__box">
+            <Title className='forgotPassword__title'>
+              {t('forgotPassword.page.title')}
+            </Title>
 
-          {
-            user.newPasswordSanded ? (
-              <>
-                <div className="forgotPassword__text-wrap">
-                  <p className="forgotPassword__text" >{t('forgotPassword.page.texts.new_password')}</p>
-                </div>
-                <div className="forgotPassword__button-wrap">
-                  <Link className="forgotPassword__button" to={PATHS.DASHBOARD}>{t('forgotPassword.btns.login')}</Link>
-                </div>
-              </>
-            ) : (
-              <>
-                <div className="forgotPassword__text-wrap">
-                  <p className="forgotPassword__text" >{t('forgotPassword.page.texts.text')}</p>
-                  <Link className="forgotPassword__text-link" to={PATHS.REGISTRATION}>{t('forgotPassword.link.registration')}</Link>
-                </div>
-
-                <form onSubmit={onSubmit}>
-                  <Input
-                    className='lg bold'
-                    type="email"
-                    name="email"
-                    value={values.email}
-                    placeholder={`${t('forgotPassword.page.form.email.placeholder')}`}
-                    error={error ? t(`error.${error}`) : errors.email}
-                    onChange={onChange}
-                    onBlur={onBlur}
-                  />
-                  <div className="forgotPassword__button-wrap">
-                    <Button
-                      className='forgotPassword__button loading-btn'
-                      type="submit"
-                      disabled={loading}
-                    >
-                      {t('forgotPassword.btns.reset_password')}
-                      {loading ? <Loader /> : null}
-                    </Button>
-
-                    <Link className="forgotPassword__button-link" to={PATHS.LOGIN}>{t('forgotPassword.btns.cancel')}</Link>
+            {
+              user.newPasswordSanded ? (
+                <>
+                  <div className="forgotPassword__text-wrap">
+                    <p className="forgotPassword__text" >{t('forgotPassword.page.texts.new_password')}</p>
                   </div>
-                </form>
-              </>
+                  <div className="forgotPassword__button-wrap">
+                    <Link className="forgotPassword__button" to={PATHS.DASHBOARD}>{t('forgotPassword.btns.login')}</Link>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="forgotPassword__text-wrap">
+                    <p className="forgotPassword__text" >{t('forgotPassword.page.texts.text')}</p>
+                    <Link className="forgotPassword__text-link" to={PATHS.REGISTRATION}>{t('forgotPassword.link.registration')}</Link>
+                  </div>
 
-            )
-          }
+                  <form onSubmit={onSubmit}>
+                    <Input
+                      className='lg bold'
+                      type="email"
+                      name="email"
+                      value={values.email}
+                      placeholder={`${t('forgotPassword.page.form.email.placeholder')}`}
+                      error={error ? t(`error.${error}`) : errors.email}
+                      onChange={onChange}
+                      onBlur={onBlur}
+                    />
+                    <div className="forgotPassword__button-wrap">
+                      <Button
+                        className='forgotPassword__button loading-btn'
+                        type="submit"
+                        disabled={loading}
+                      >
+                        {t('forgotPassword.btns.reset_password')}
+                        {loading ? <Loader /> : null}
+                      </Button>
+
+                      <Link className="forgotPassword__button-link" to={PATHS.LOGIN}>{t('forgotPassword.btns.cancel')}</Link>
+                    </div>
+                  </form>
+                </>
+
+              )
+            }
+          </div>
         </div>
       </div>
     </ForgotPasswordStyles>

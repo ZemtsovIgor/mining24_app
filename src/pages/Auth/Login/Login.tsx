@@ -9,7 +9,7 @@ import {
   Button,
   Title,
   Input,
-  Loader,
+  Loader, LanguageSelector,
 } from '../../../elements';
 import { LoginStyles } from './Login.Styles';
 import { LogInParams } from "../../../api";
@@ -136,54 +136,62 @@ const Registration: React.FC<LogInProps> = (props: LogInProps) => {
             <p className="error__text">{t(`error.${error}`)}</p>
           </div>
         )}
-        <div className={`login__box ${error ? '-error' : ''}`}>
-          <Title className='login__title'>
-            {t('login.page.title')}
-          </Title>
+        <div className="login__lang-wrap -hidden-small">
+          <LanguageSelector />
+        </div>
+        <div className="login__wrap">
+          <div className={`login__box ${error ? '-error' : ''}`}>
+            <Title className='login__title'>
+              {t('login.page.title')}
+            </Title>
 
-          <div className="login__text-wrap">
-            <p className="login__text" >{t('login.page.texts.text')}</p>
-            <Link className="login__text-link" to={PATHS.REGISTRATION}>{t('login.link.registration')}</Link>
-          </div>
-
-          <form onSubmit={onSubmit}>
-            <Input
-              className='lg bold'
-              type="email"
-              name="email"
-              value={values.email}
-              placeholder={`${t('login.page.form.email.placeholder')}`}
-              error={error ? t(`error.${error}`) : errors.email}
-              onChange={onChange}
-              onBlur={onBlur}
-            />
-            <Input
-              className='lg bold'
-              type="password"
-              name="password"
-              placeholder={`${t('login.page.form.password.placeholder')}`}
-              error={error ? t(`error.${error}`) : errors.password}
-              onChange={onChange}
-              onBlur={onBlur}
-              show={showInput.password}
-              onShow={onToggleShow}
-            />
-            <div className="login__button-wrap">
-              <Button
-                className='login__button loading-btn'
-                type="submit"
-                disabled={loading}
-              >
-                {t('login.btns.login')}
-                {loading ? <Loader /> : null}
-              </Button>
+            <div className="login__text-wrap">
+              <p className="login__text" >{t('login.page.texts.text')}</p>
+              <Link className="login__text-link" to={PATHS.REGISTRATION}>{t('login.link.registration')}</Link>
             </div>
 
-          </form>
+            <form onSubmit={onSubmit}>
+              <Input
+                className='lg bold'
+                type="email"
+                name="email"
+                value={values.email}
+                placeholder={`${t('login.page.form.email.placeholder')}`}
+                error={error ? t(`error.${error}`) : errors.email}
+                onChange={onChange}
+                onBlur={onBlur}
+              />
+              <Input
+                className='lg bold'
+                type="password"
+                name="password"
+                placeholder={`${t('login.page.form.password.placeholder')}`}
+                error={error ? t(`error.${error}`) : errors.password}
+                onChange={onChange}
+                onBlur={onBlur}
+                show={showInput.password}
+                onShow={onToggleShow}
+              />
+              <div className="login__button-wrap">
+                <Button
+                  className='login__button loading-btn'
+                  type="submit"
+                  disabled={loading}
+                >
+                  {t('login.btns.login')}
+                  {loading ? <Loader /> : null}
+                </Button>
+              </div>
 
-          <div className="login__links">
-            <Link className="login__links-link" to={PATHS.FORGOT_PASSWORD}>{t('login.link.forgot_password')}</Link>
+            </form>
+
+            <div className="login__links">
+              <Link className="login__links-link" to={PATHS.FORGOT_PASSWORD}>{t('login.link.forgot_password')}</Link>
+            </div>
           </div>
+        </div>
+        <div className="login__lang-wrap -hidden-large">
+          <LanguageSelector />
         </div>
       </div>
     </LoginStyles>

@@ -8,6 +8,17 @@ const loading = (start = true): LoadingActionTypes => ({
   payload: null,
 });
 
-export default {
+const openModal = (payload: any) => ({
+  type: types.OPEN_MODAL,
+  payload,
+});
+
+const closeModal = () => ({
+  type: types.CLOSE_MODAL,
+});
+
+export {
   loading,
+  openModal,
+  closeModal
 };

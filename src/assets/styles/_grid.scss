@@ -466,45 +466,45 @@
   }
 
   .grid-margin-x {
-    margin-left: -0.5rem;
-    margin-right: -0.5rem;
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
 
     > {
       .cell {
-        width: calc(100% - 1rem);
-        margin-left: 0.5rem;
-        margin-right: 0.5rem;
+        width: calc(100% - 1.5rem);
+        margin-left: 0.75rem;
+        margin-right: 0.75rem;
       }
 
       .xlarge-3 {
-        width: calc(25% - 1rem);
+        width: calc(25% - 1.5rem);
       }
       .xlarge-4 {
-        width: calc(33.33333% - 1rem);
+        width: calc(33.33333% - 1.5rem);
       }
       .xlarge-45 {
-        width: calc(36.66667% - 1rem);
+        width: calc(36.66667% - 1.5rem);
       }
       .xlarge-5 {
-        width: calc(41.66667% - 1rem);
+        width: calc(41.66667% - 1.5rem);
       }
       .xlarge-6 {
-        width: calc(50% - 1rem);
+        width: calc(50% - 1.5rem);
       }
       .xlarge-7 {
-        width: calc(58.33333% - 1rem);
+        width: calc(58.33333% - 1.5rem);
       }
       .xlarge-75 {
-        width: calc(63.33333% - 1rem);
+        width: calc(63.33333% - 1.5rem);
       }
       .xlarge-8 {
-        width: calc(66.66667% - 1rem);
+        width: calc(66.66667% - 1.5rem);
       }
       .xlarge-9 {
-        width: calc(75% - 1rem);
+        width: calc(75% - 1.5rem);
       }
       .xlarge-12 {
-        width: calc(100% - 1rem);
+        width: calc(100% - 1.5rem);
       }
     }
   }

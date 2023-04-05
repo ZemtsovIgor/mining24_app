@@ -12,8 +12,15 @@ import {
 } from './Sidebar.Styles';
 import {PATHS} from "../../const/paths.constants";
 import { Icon, Logo } from '../../elements';
+import { logout } from '../../store/user/actions';
 
-const Sidebar: React.FC = () => {
+
+type SidebarProps = {
+  logout: () => void;
+};
+
+const Sidebar: React.FC<SidebarProps> = (props: SidebarProps) => {
+  const { logout } = props;
   const { pathname } = useLocation();
   const { t } = useTranslation();
 
@@ -74,10 +81,17 @@ const Sidebar: React.FC = () => {
               <span className="menu__text">{t('navBar.profile')}</span>
             </MenuListLink>
           </MenuListItem>
+
+          <MenuListItem className="menu__item">
+            <button onClick={() => logout()} className="menu__link">
+              <Icon name="logout" size="20" />
+              <span className="menu__text">{t('navBar.logout')}</span>
+            </button>
+          </MenuListItem>
         </MenuList>
       </Menu>
     </SidebarWrapper>
   );
 };
 
-export default connect()(Sidebar);
+export default connect(null, { logout })(Sidebar);

@@ -9,7 +9,7 @@ import {
   Button,
   Title,
   Input,
-  Loader,
+  Loader, LanguageSelector,
 } from '../../../elements';
 import { RegistrationStyles } from './Registration.Styles';
 import {RegistrationParams} from "../../../api";
@@ -148,73 +148,77 @@ const Registration: React.FC<RegistrationProps> = (props: RegistrationProps) => 
             <p className="error__text">{t(`error.${error}`)}</p>
           </div>
         )}
+        <div className="registration__lang-wrap -hidden-small">
+          <LanguageSelector />
+        </div>
+        <div className="registration__wrap">
+          <div className="registration__box">
 
-        <div className="registration__box">
+            <Title className='registration__title'>
+              {t('registration.page.title')}
+            </Title>
 
-          <Title className='registration__title'>
-            {t('registration.page.title')}
-          </Title>
+            <div className="registration__text-wrap">
+              <p className="registration__text" >{t('registration.page.texts.text')}</p>
+              <Link className="registration__text-link" to={PATHS.LOGIN}>{t('registration.link.login')}</Link>
+            </div>
 
-          <div className="registration__text-wrap">
-            <p className="registration__text" >{t('registration.page.texts.text')}</p>
-            <Link className="registration__text-link" to={PATHS.LOGIN}>{t('registration.link.login')}</Link>
+            <form onSubmit={onSubmit}>
+              <Input
+                className='lg bold'
+                type="email"
+                name="email"
+                value={values.email}
+                placeholder={`${t('registration.page.form.email.placeholder')}`}
+                error={errors.email}
+                onChange={onChange}
+                onBlur={onBlur}
+              />
+              <Input
+                className='lg bold'
+                type="password"
+                name="password"
+                value={values.password}
+                placeholder={`${t('registration.page.form.password.placeholder')}`}
+                error={errors.password}
+                onChange={onChange}
+                onBlur={onBlur}
+                show={showInput.password}
+                onShow={onToggleShow}
+              />
+              <div className="registration__hint">
+                <ul className="registration__hint-list">
+                  <li className="registration__hint-item">{t('registration.page.form.hint.one')}</li>
+                  <li className="registration__hint-item">{t('registration.page.form.hint.two')}</li>
+                  <li className="registration__hint-item">{t('registration.page.form.hint.three')}</li>
+                </ul>
+              </div>
+              <Input
+                className='lg bold'
+                type="password"
+                name="confPassword"
+                value={values.confPassword}
+                placeholder={`${t('registration.page.form.confPassword.placeholder')}`}
+                error={errors.confPassword}
+                onChange={onChange}
+                onBlur={onBlur}
+                show={showInput.confPassword}
+                onShow={onToggleShow}
+              />
+              <div className="registration__button-wrap">
+                <Button
+                  className='registration__button loading-btn'
+                  type="submit"
+                  disabled={loading}
+                >
+                  {t('registration.btns.registration')}
+                  {loading ? <Loader /> : null}
+                </Button>
+              </div>
+
+            </form>
+
           </div>
-
-          <form onSubmit={onSubmit}>
-            <Input
-              className='lg bold'
-              type="email"
-              name="email"
-              value={values.email}
-              placeholder={`${t('registration.page.form.email.placeholder')}`}
-              error={errors.email}
-              onChange={onChange}
-              onBlur={onBlur}
-            />
-            <Input
-              className='lg bold'
-              type="password"
-              name="password"
-              value={values.password}
-              placeholder={`${t('registration.page.form.password.placeholder')}`}
-              error={errors.password}
-              onChange={onChange}
-              onBlur={onBlur}
-              show={showInput.password}
-              onShow={onToggleShow}
-            />
-            <div className="registration__hint">
-              <ul className="registration__hint-list">
-                <li className="registration__hint-item">{t('registration.page.form.hint.one')}</li>
-                <li className="registration__hint-item">{t('registration.page.form.hint.two')}</li>
-                <li className="registration__hint-item">{t('registration.page.form.hint.three')}</li>
-              </ul>
-            </div>
-            <Input
-              className='lg bold'
-              type="password"
-              name="confPassword"
-              value={values.confPassword}
-              placeholder={`${t('registration.page.form.confPassword.placeholder')}`}
-              error={errors.confPassword}
-              onChange={onChange}
-              onBlur={onBlur}
-              show={showInput.confPassword}
-              onShow={onToggleShow}
-            />
-            <div className="registration__button-wrap">
-              <Button
-                className='registration__button loading-btn'
-                type="submit"
-                disabled={loading}
-              >
-                {t('registration.btns.registration')}
-                {loading ? <Loader /> : null}
-              </Button>
-            </div>
-
-          </form>
-
         </div>
       </div>
     </RegistrationStyles>
