@@ -1,12 +1,26 @@
 import styled from 'styled-components';
 
 export const ReferralsContainer: any = styled.div`
+  .home {
+    &-title {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 32px;
+      color: var(--black);
+
+      &_wrap {
+        margin-top: 40px;
+        margin-bottom: 24px;
+      }
+    }
+  }
+  
   .wallet {
     &-share {
       background: var(--white);
       box-shadow: 0 4px 28px rgba(0, 0, 0, 0.03);
       border-radius: 10px;
-      margin-top: 45px;
+      margin-top: 33px;
 
       &__wrap {
         display: flex;
@@ -24,7 +38,7 @@ export const ReferralsContainer: any = styled.div`
       &__image {
         &_wrap {
           display: flex;
-          width: 55%;
+          width: 87%;
         }
       }
 
@@ -43,7 +57,7 @@ export const ReferralsContainer: any = styled.div`
         color: var(--black);
 
         &_wrap {
-          margin-bottom: 20px;
+          margin-bottom: 13px;
         }
       }
 
@@ -107,7 +121,7 @@ export const ReferralsContainer: any = styled.div`
 
     .home-title_wrap {
       &.-big {
-        margin-top: 8px;
+        margin-top: -3px;
         margin-bottom: 16px;
 
         & .home-title {

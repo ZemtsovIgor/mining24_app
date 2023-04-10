@@ -4,10 +4,10 @@ export const TransactionsContainer: any = styled.div`
   
   .transactions {
     &__button {
-      padding: 10px 30px;
+      padding: 12px 20px;
       
       &-wrap {
-        margin-top: 25px;
+        margin-top: 32px;
       }
     }
   }

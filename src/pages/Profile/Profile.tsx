@@ -157,14 +157,14 @@ const Profile: React.FC<ProfileProps> = (props: ProfileProps) => {
     <MainContent className="content-main home-page">
       <Container>
         <ProfileContainer>
-          <div className="home-title_wrap -big">
+          <div className="home-title_wrap -big -hidden-large">
             <span className="home-title">Profile</span>
           </div>
           <div className="grid-x grid-margin-x profile">
             <div className="cell small-12 xlarge-5">
               <form className="profile-form" onSubmit={onSubmit}>
                 <Input
-                  className='lg bold'
+                  className='profile-input'
                   type="text"
                   name="fullName"
                   value={values.fullName}
@@ -174,7 +174,7 @@ const Profile: React.FC<ProfileProps> = (props: ProfileProps) => {
                   onBlur={onBlur}
                 />
                 <Input
-                  className='lg bold'
+                  className='profile-input'
                   type="text"
                   name="dateOfBirth"
                   value={values.dateOfBirth}
@@ -184,7 +184,7 @@ const Profile: React.FC<ProfileProps> = (props: ProfileProps) => {
                   onBlur={onBlur}
                 />
                 <Input
-                  className='lg bold'
+                  className='profile-input'
                   type="email"
                   name="email"
                   value={values.email}
@@ -203,7 +203,7 @@ const Profile: React.FC<ProfileProps> = (props: ProfileProps) => {
                   onChange={onChange}
                 />
                 <PhoneInput
-                  className='lg bold'
+                  className='profile-input'
                   placeholder={t('profile.page.form.phone.placeholder')}
                   value={values.phone}
                   name="phone"

@@ -17,8 +17,14 @@ const closeModal = () => ({
   type: types.CLOSE_MODAL,
 });
 
+const setMobileMenuOpen = (payload: boolean) => ({
+  type: types.SET_MOBILE_MENU_OPEN,
+  payload,
+});
+
 export {
   loading,
   openModal,
-  closeModal
+  closeModal,
+  setMobileMenuOpen
 };

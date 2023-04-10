@@ -2,6 +2,59 @@ body {
   font-family: var(--montserrat);
 }
 
+.off-canvas-content {
+  transform: none;
+  transition: transform 0.5s ease;
+  backface-visibility: hidden;
+
+  &.is-open-right {
+    overflow: hidden;
+
+    & .has-transition-push {
+      transform: translateX(-16em);
+    }
+  }
+}
+
+.is-open-right .title-bar .menu-icon {
+
+}
+
+.off-canvas {
+  position: fixed;
+  z-index: 12;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background: #e6e6e6;
+
+  &.is-transition-push {
+    z-index: 12;
+  }
+
+  &.is-open {
+    transform: translate(0, 0);
+  }
+
+  &.is-closed {
+    visibility: hidden;
+    width: 0;
+  }
+}
+
+.position-right {
+  top: 0;
+  right: 0;
+  height: calc(100vh - 56px);
+  overflow-y: auto;
+  width: 100vw;
+  transform: translateX(100vw);
+  background: #F7F7FA;
+  padding: 0 1em;
+}
+
+
 .-modal-opened {
   position: fixed;
 }

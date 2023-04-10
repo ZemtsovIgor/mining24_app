@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const SettingsContainer: any = styled.div`
+  font-family: var(--montserrat);
+  
   .home {
     &-title {
       font-weight: 700;
@@ -21,19 +23,27 @@ export const SettingsContainer: any = styled.div`
 
       &_wrap {
         margin-bottom: 20px;
+        margin-top: 32px;
       }
     }
   }
   
   .settings {
+    
+    &-input {
+      margin: 0 0 9px;
+    }
+    
     &-form {
       margin-bottom: 56px;
     }
     
     &__button {
       width: 100%;
+      padding: 8px 20px;
+      
       &-wrap {
-        
+        margin-top: 19px;
       }
     }
   }
@@ -54,7 +64,7 @@ export const SettingsContainer: any = styled.div`
 
     .home-title_wrap {
       &.-big {
-        margin-top: 8px;
+        margin-top: -3px;
         margin-bottom: 16px;
 
         & .home-title {

@@ -3,11 +3,13 @@ import types, { AppActionTypes } from '../actionTypes';
 export type AppReducerState = {
   loading: boolean;
   modal: any;
+  mobileMenuOpened: boolean;
 };
 
 const INITIAL_STATE: AppReducerState = {
   loading: true,
   modal: null,
+  mobileMenuOpened: false,
 };
 
 const appReducers = (state = INITIAL_STATE, action: AppActionTypes): AppReducerState => {
@@ -35,6 +37,12 @@ const appReducers = (state = INITIAL_STATE, action: AppActionTypes): AppReducerS
         ...state,
         modal: null,
       };
+    case types.SET_MOBILE_MENU_OPEN: {
+      return {
+        ...state,
+        mobileMenuOpened: action.payload,
+      };
+    }
     default:
       return state;
   }

@@ -137,7 +137,7 @@ const Statistics: React.FC = () => {
     <MainContent className="content-main home-page">
       <Container>
         <StatisticsContainer>
-          <div className="home-title_wrap -big">
+          <div className="home-title_wrap -big -hidden-large">
             <span className="home-title">Statistics</span>
           </div>
           {

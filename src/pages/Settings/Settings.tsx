@@ -139,7 +139,7 @@ const Settings: React.FC<SettingsProps> = (props: SettingsProps) => {
     <MainContent className="content-main home-page">
       <Container>
         <SettingsContainer>
-          <div className="home-title_wrap -big">
+          <div className="home-title_wrap -big -hidden-large">
             <span className="home-title">Settings</span>
           </div>
           <div className="grid-x settings">
@@ -153,7 +153,7 @@ const Settings: React.FC<SettingsProps> = (props: SettingsProps) => {
 
               <form className="settings-form" onSubmit={onSubmit}>
                 <Input
-                  className='lg bold'
+                  className='settings-input'
                   type="password"
                   name="password"
                   value={values.password}
@@ -165,7 +165,7 @@ const Settings: React.FC<SettingsProps> = (props: SettingsProps) => {
                   onShow={onToggleShow}
                 />
                 <Input
-                  className='lg bold'
+                  className='settings-input'
                   type="password"
                   name="password"
                   value={values.password}
@@ -177,7 +177,7 @@ const Settings: React.FC<SettingsProps> = (props: SettingsProps) => {
                   onShow={onToggleShow}
                 />
                 <Input
-                  className='lg bold'
+                  className='settings-input'
                   type="password"
                   name="confPassword"
                   value={values.confPassword}
@@ -192,7 +192,7 @@ const Settings: React.FC<SettingsProps> = (props: SettingsProps) => {
                   <span className="home-subtitle">{t('settings.page.texts.changeEmail')}</span>
                 </div>
                 <Input
-                  className='lg bold'
+                  className='settings-input'
                   type="email"
                   name="email"
                   value={values.email}
@@ -202,7 +202,7 @@ const Settings: React.FC<SettingsProps> = (props: SettingsProps) => {
                   onBlur={onBlur}
                 />
                 <Input
-                  className='lg bold'
+                  className='settings-input'
                   type="password"
                   name="password"
                   value={values.password}
@@ -231,7 +231,7 @@ const Settings: React.FC<SettingsProps> = (props: SettingsProps) => {
 
               <form className="settings-form" onSubmit={onSubmit}>
                 <Input
-                  className='lg bold'
+                  className='settings-input'
                   type="password"
                   name="password"
                   value={values.password}
@@ -243,7 +243,7 @@ const Settings: React.FC<SettingsProps> = (props: SettingsProps) => {
                   onShow={onToggleShow}
                 />
                 <Input
-                  className='lg bold'
+                  className='settings-input'
                   type="password"
                   name="password"
                   value={values.password}

@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const StatisticsContainer: any = styled.div`
+  font-family: var(--montserrat);
+  
   .title {
     font-weight: 700;
     font-size: 24px;
@@ -57,7 +59,7 @@ export const StatisticsContainer: any = styled.div`
 
       &_wrap {
         margin-top: 40px;
-        margin-bottom: 24px;
+        margin-bottom: 21px;
       }
     }
   }
@@ -78,7 +80,7 @@ export const StatisticsContainer: any = styled.div`
 
     .home-title_wrap {
       &.-big {
-        margin-top: 8px;
+        margin-top: -2px;
         margin-bottom: 16px;
 
         & .home-title {

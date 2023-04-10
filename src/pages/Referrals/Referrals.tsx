@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {
-  Container, Icon,
+  Container,
   MainContent, Modal, ReferralInput, SocialNetworks,
 } from '../../elements';
 import { ReferralsContainer } from "./Referrals.Styles";
@@ -27,7 +27,7 @@ const data:any = {
   ]
 };
 
-const hasData = false;
+const hasData = true;
 
 const Referrals: React.FC = () => {
   const { t } = useTranslation();
@@ -37,7 +37,7 @@ const Referrals: React.FC = () => {
     <MainContent className="content-main home-page">
       <Container>
         <ReferralsContainer>
-          <div className="home-title_wrap -big">
+          <div className="home-title_wrap -big -hidden-large">
             <span className="home-title">Referrals</span>
           </div>
           {
@@ -49,12 +49,12 @@ const Referrals: React.FC = () => {
                 <div className="wallet-share">
                   <div className="wallet-share__wrap">
                     <div className="grid-x grid-margin-x wallet-share__container">
-                      <div className="cell grid-x small-12 xlarge-5 wallet-share__cell">
+                      <div className="cell grid-x small-12 xlarge-3 wallet-share__cell">
                         <div className="wallet-share__image_wrap">
                           <img className="wallet-share__image" src="/img/main/share.svg" alt="mining24" />
                         </div>
                       </div>
-                      <div className="cell grid-x small-12 xlarge-7 wallet-share__cell">
+                      <div className="cell grid-x small-12 xlarge-9 wallet-share__cell">
                         <div className="wallet-share__ref">
                           <div className="wallet-share__title_wrap">
                             <span className="wallet-share__title">Refer more friends to earn more profit </span>
@@ -79,12 +79,12 @@ const Referrals: React.FC = () => {
               <div className="wallet-share -big">
                 <div className="wallet-share__wrap">
                   <div className="grid-x grid-margin-x wallet-share__container">
-                    <div className="cell grid-x small-12 xlarge-5 wallet-share__cell">
+                    <div className="cell grid-x small-12 xlarge-3 wallet-share__cell">
                       <div className="wallet-share__image_wrap">
                         <img className="wallet-share__image" src="/img/main/share.svg" alt="mining24" />
                       </div>
                     </div>
-                    <div className="cell grid-x small-12 xlarge-7 wallet-share__cell">
+                    <div className="cell grid-x small-12 xlarge-9 wallet-share__cell">
                       <div className="wallet-share__ref">
                         <div className="wallet-share__title_wrap">
                           <span className="wallet-share__title">You don't have any referrals yet</span>

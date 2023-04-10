@@ -1,14 +1,14 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import {
   Button,
   Container,
   MainContent,
-  Modal,
 } from '../../elements';
 import { ContractItemContainer } from "./Contract.Styles";
 import LineChart from "../../elements/LineChart/LineChart";
 import {useTranslation} from "react-i18next";
+import {closeModal, openModal} from "../../store/app/actions";
 
 const data:any = {
   name: 'Simple',
@@ -51,9 +51,37 @@ const data:any = {
   }
 };
 
-const ContractItem: React.FC = () => {
+type ContractProps = {
+  openModal: (payload: any) => void;
+  closeModal: () => void;
+};
+
+
+const ContractItem: React.FC<ContractProps> = (props: ContractProps) => {
+  const { openModal, closeModal } = props;
   const { t } = useTranslation();
-  const [modalCanselContractOpened, setModalCanselContractOpened] = useState<boolean>(false);
+
+  const modalCansel = () => (
+    <div className="modal-content">
+      <h4 className="modal-title">{t('modal.canselContract.title')}</h4>
+      <div className="modal-btn__wrap">
+        <Button
+          className="modal-btn"
+          type="button"
+          onClick={() => closeModal()}
+        >
+          Yes
+        </Button>
+        <Button
+          className="modal-btn -gray"
+          type="button"
+          onClick={() => closeModal()}
+        >
+          No
+        </Button>
+      </div>
+    </div>
+  );
 
   return (
     <MainContent className="content-main home-page">
@@ -73,43 +101,21 @@ const ContractItem: React.FC = () => {
           <div className="bns-wrap">
             <Button
               className='btn'
-              onClick={() => setModalCanselContractOpened(true)}
+              onClick={() => openModal({
+                closeModal: closeModal,
+                className: "modal canselContract",
+                hasCloseBtn: true,
+                content: modalCansel
+              })
+              }
             >
               Cancel contract
             </Button>
           </div>
         </ContractItemContainer>
-
-        <Modal
-          opened={modalCanselContractOpened}
-          closeModal={() => setModalCanselContractOpened(false)}
-          className="modal canselContract"
-          hasCloseBtn={true}
-        >
-          <div className="modal-content">
-            <h4 className="modal-title">{t('modal.canselContract.title')}</h4>
-            <div className="modal-btn__wrap">
-              <Button
-                className="modal-btn"
-                type="button"
-                onClick={() => setModalCanselContractOpened(false)}
-              >
-                Yes
-              </Button>
-              <Button
-                className="modal-btn -gray"
-                type="button"
-                onClick={() => setModalCanselContractOpened(false)}
-              >
-                No
-              </Button>
-            </div>
-          </div>
-        </Modal>
-
       </Container>
     </MainContent>
   );
 };
 
-export default connect()(ContractItem);
+export default connect(null, { openModal, closeModal })(ContractItem);

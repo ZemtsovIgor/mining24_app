@@ -1,3 +1,3 @@
-import Referrals from './Transactions';
+import Transactions from './Transactions';
 
-export default Referrals;
+export default Transactions;

@@ -5,19 +5,24 @@ import { NoContractsWrapper } from './NoContracts.styles';
 import { useTranslation } from "react-i18next";
 import { PATHS } from "../../const/paths.constants";
 
-const NoContracts: React.FC = () => {
+type BurgerMenuProps = {
+  image?: string;
+};
+
+const NoContracts: React.FC<BurgerMenuProps> = (props: BurgerMenuProps) => {
+  const { image } = props;
   const { t } = useTranslation();
 
   return (
     <NoContractsWrapper>
       <div className="contracts__wrap">
         <div className="grid-x grid-margin-x contracts__container">
-          <div className="cell grid-x small-12 xlarge-5 contracts__cell">
+          <div className="cell grid-x small-12 xlarge-3 contracts__cell">
             <div className="contracts__image_wrap">
-              <img className="contracts__image" src="/img/main/stat.png" alt="mining24" />
+              <img className="contracts__image" src={image ? image : '/img/main/no-stat.svg'} alt="mining24" />
             </div>
           </div>
-          <div className="cell grid-x small-12 xlarge-7 contracts__cell">
+          <div className="cell grid-x small-12 xlarge-9 contracts__cell">
             <div className="contracts__ref">
               <div className="contracts__title-wrap">
                 <span className="contracts__title">{t('no_contracts.title')}</span>

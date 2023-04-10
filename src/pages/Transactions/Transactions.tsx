@@ -15,17 +15,17 @@ const data:any = {
     {
       date: '10/10/2022',
       sum: '1 929 485 BTC',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol...',
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...',
     },
     {
       date: '10/10/2022',
       sum: '834 839 USDC',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol...',
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...',
     },
     {
       date: '10/10/2022',
       sum: '93 302 ETH',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dol...',
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...',
     }
   ],
   recommended: [
@@ -108,7 +108,7 @@ const Transactions: React.FC = () => {
     <MainContent className="content-main home-page">
       <Container>
         <TransactionsContainer>
-          <div className="home-title_wrap -big">
+          <div className="home-title_wrap -big -hidden-large">
             <span className="home-title">Transactions</span>
           </div>
           {
@@ -132,7 +132,7 @@ const Transactions: React.FC = () => {
               </>
             ) : (
               <>
-                <NoContracts />
+                <NoContracts image="/img/main/no-trans.svg" />
                 <div className="home-title_wrap">
                   <span className="home-title">{t('statistics.title')}</span>
                 </div>

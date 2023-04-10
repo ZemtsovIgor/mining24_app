@@ -119,7 +119,9 @@ export const ModalStyles: any = styled.div`
         
         &__wrap {
           display: flex;
+          flex-direction: row;
           gap: 20px;
+          margin-top: 20px;
         }
         
         &.-gray {
@@ -161,12 +163,30 @@ export const ModalStyles: any = styled.div`
         font-weight: 400;
         font-size: 16px;
         line-height: 24px;
-        margin: 16px 0px 0px;
+        margin: 16px 0 0;
       }
       
       &-social {
         &__wrap {
           margin-top: 32px;
+        }
+      }
+    }
+    
+    &.canselContract {
+      & .modal {
+        &__dialog {
+          padding-top: 42px;
+        }
+
+        &-btn {
+          padding: 12px 20px;
+
+          &__wrap {
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 31px;
+          }
         }
       }
     }

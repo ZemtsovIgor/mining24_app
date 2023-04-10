@@ -79,12 +79,6 @@ export const MenuListItem: any = styled.li`
       margin-left: 17px;
     }
   }
-
-  @media (max-width: 992px) {
-    &:last-child {
-      margin: 0 0 auto;
-    }
-  }
 `;
 
 export const MenuListLink: any = styled(NavLink)`

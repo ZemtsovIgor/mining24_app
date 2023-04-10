@@ -8,8 +8,10 @@ export const ProfileContainer: any = styled.div`
     
     &__button {
       width: 100%;
+      padding: 8px 20px;
+      
       &-wrap {
-        
+        margin-top: 19px;
       }
     }
   }
@@ -80,6 +82,31 @@ export const ProfileContainer: any = styled.div`
           line-height: 36px;
           color: var(--black);
         }
+      }
+    }
+    
+    .profile {
+      flex-direction: column-reverse;
+
+      &-form {
+        margin-bottom: 0;
+        margin-top: 30px;
+      }
+      
+      &-input {
+        margin: 0 0 12px;
+      }
+      
+      &__select {
+        margin: 0 0 12px;
+      }
+    }
+
+    .verification {
+      margin-left: 0;
+
+      &-button {
+        width: 100%;
       }
     }
   }

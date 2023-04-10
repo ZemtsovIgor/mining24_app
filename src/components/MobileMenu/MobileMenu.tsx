@@ -1,15 +1,22 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { useLocation, Link } from 'react-router-dom';
+import { AppStateType} from "../../store";
 
 import { MobileMenuWrapper } from './MobileMenu.styles';
 import {useTranslation} from "react-i18next";
 
 import { Icon } from '../../elements';
 import { PATHS } from "../../const/paths.constants";
+import { setMobileMenuOpen } from "../../store/app/actions";
 
+type MobileMenuProps = {
+  mobileMenuOpened: boolean;
+  setMobileMenuOpen: (value: boolean) => void;
+};
 
-const MobileMenu: React.FC = () => {
+const MobileMenu: React.FC<MobileMenuProps> = (props: MobileMenuProps) => {
+  const { mobileMenuOpened, setMobileMenuOpen } = props;
   const { t } = useTranslation();
   const { pathname } = useLocation();
 
@@ -34,15 +41,31 @@ const MobileMenu: React.FC = () => {
             <span className="mobileMenu-text">{t('navBar.shop')}</span>
           </Link>
         </div>
-        <div className={pathname === PATHS.STATISTICS ? 'mobileMenu-item -active' : 'mobileMenu-item'}>
-          <Link to={PATHS.STATISTICS} className='mobileMenu-link'>
-            <Icon name="more" size="20" />
+        <div
+          className={`mobileMenu-item ${mobileMenuOpened ? '-opened' : ''}`}
+          onClick={() => setMobileMenuOpen(!mobileMenuOpened)}
+        >
+          <div className='mobileMenu-link'>
+            <div
+              className="mobileMenu-burger"
+            >
+              <div className="x" />
+              <div className="y" />
+              <div className="z" />
+            </div>
             <span className="mobileMenu-text">{t('navBar.more')}</span>
-          </Link>
+          </div>
         </div>
       </div>
     </MobileMenuWrapper>
   );
 };
 
-export default connect()(MobileMenu);
+const mapStateToProps = (state: AppStateType) => {
+  const { app } = state;
+  return {
+    mobileMenuOpened: app.mobileMenuOpened,
+  };
+};
+
+export default connect(mapStateToProps, { setMobileMenuOpen })(MobileMenu);

@@ -6,7 +6,7 @@ export const ReferralsWrapper: any = styled.div`
   .referrals {
     background: var(--white);
     border-radius: 10px;
-    padding: 19px 20px 24px;
+    padding: 19px 20px 11px;
     width: 100%;
     flex-direction: column;
     gap: 13px;
@@ -34,12 +34,12 @@ export const ReferralsWrapper: any = styled.div`
       line-height: 24px;
       color: var(--black);
       cursor: pointer;
-      height: 47px;
       display: flex;
       align-items: center;
 
       &__wrap {
         display: grid;
+        padding: 0 12px;
         grid-gap: 1em;
         align-items: center;
         border-bottom: 1px solid #EFEFEF;
@@ -52,12 +52,13 @@ export const ReferralsWrapper: any = styled.div`
       &__wrap {
         display: flex;
         flex-direction: column;
+        padding: 18px 12px 0;
       }
 
       &__row {
         display: grid;
         grid-gap: 1em;
-        margin: 12px 0 11px;
+        margin: 16px 0;
         align-items: center;
 
         grid-template-columns: 1fr 1fr 1fr;
