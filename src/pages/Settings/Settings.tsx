@@ -9,6 +9,9 @@ import { useTranslation } from "react-i18next";
 import cloneDeep from "lodash/cloneDeep";
 import {validateEmail, validatePassword} from "../../common/utils/validators";
 import {connect} from "react-redux";
+import {AppStateType} from "../../store";
+import {selectErrorByKey, selectLoadingByKey} from "../../store/loadingsErrors/selectors";
+import types from "../../store/actionTypes";
 
 export type ChangePasswordParams = {
   password: string;
@@ -273,4 +276,11 @@ const Settings: React.FC<SettingsProps> = (props: SettingsProps) => {
   );
 };
 
-export default connect()(Settings);
+const mapState = (state: AppStateType) => {
+  return {
+    loading: selectLoadingByKey(state, types.LOGIN_REQUEST),
+    error: selectErrorByKey(state, types.LOGIN_REQUEST),
+  };
+};
+
+export default connect(mapState)(Settings);

@@ -25,7 +25,7 @@ export interface LogInProps {
   login: (payload: LogInParams | any) => void;
 }
 
-const Registration: React.FC<LogInProps> = (props: LogInProps) => {
+const Login: React.FC<LogInProps> = (props: LogInProps) => {
   const { loading, login, error } = props;
   const { t } = useTranslation();
 
@@ -205,4 +205,4 @@ const mapState = (state: AppStateType) => {
   };
 };
 
-export default connect(mapState, { login })(Registration);
+export default connect(mapState, { login })(Login);

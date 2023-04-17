@@ -12,6 +12,9 @@ import cloneDeep from "lodash/cloneDeep";
 import { validateEmail } from "../../common/utils/validators";
 import { connect } from "react-redux";
 import {COUNTRIES, CountryWithLangs} from "../../const/countries.constants";
+import {AppStateType} from "../../store";
+import {selectErrorByKey, selectLoadingByKey} from "../../store/loadingsErrors/selectors";
+import types from "../../store/actionTypes";
 
 export type ProfileParams = {
   fullName: string;
@@ -250,4 +253,11 @@ const Profile: React.FC<ProfileProps> = (props: ProfileProps) => {
   );
 };
 
-export default connect()(Profile);
+const mapState = (state: AppStateType) => {
+  return {
+    loading: selectLoadingByKey(state, types.LOGIN_REQUEST),
+    error: selectErrorByKey(state, types.LOGIN_REQUEST),
+  };
+};
+
+export default connect(mapState)(Profile);

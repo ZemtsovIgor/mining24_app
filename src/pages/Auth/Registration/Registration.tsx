@@ -2,9 +2,9 @@ import cloneDeep from 'lodash/cloneDeep';
 import React, { useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { connect } from 'react-redux';
+import {useParams} from "react-router-dom";
 
 import { validateEmail, validatePassword } from '../../../common/utils/validators';
-import { STORAGE_KEYS } from '../../../const/storage_keys.constants';
 import {
   Button,
   Title,
@@ -15,22 +15,22 @@ import { RegistrationStyles } from './Registration.Styles';
 import {RegistrationParams} from "../../../api";
 import {Link} from "react-router-dom";
 import {PATHS} from "../../../const/paths.constants";
+import {AppStateType} from "../../../store";
+import {selectErrorByKey, selectLoadingByKey} from "../../../store/loadingsErrors/selectors";
+import types from "../../../store/actionTypes";
 
 export interface RegistrationProps {
   loading: boolean;
   error: string | null;
-  location: any;
 }
 
 const Registration: React.FC<RegistrationProps> = (props: RegistrationProps) => {
-  const { error, loading, location } = props;
+  const { error, loading } = props;
   const { t } = useTranslation();
-
-  const query = new URLSearchParams(location.search);
-  const queryRef = query.get(STORAGE_KEYS.REF_ID) || '';
+  const { ref } = useParams();
 
   const [values, setValues] = useState<{ [key: string]: string }>({
-    inviter: queryRef || '',
+    inviter: ref || '',
     email: '',
     password: '',
     confPassword: '',
@@ -225,4 +225,11 @@ const Registration: React.FC<RegistrationProps> = (props: RegistrationProps) => 
   );
 };
 
-export default connect()(Registration);
+const mapState = (state: AppStateType) => {
+  return {
+    loading: selectLoadingByKey(state, types.REGISTRATION_REQUEST),
+    error: selectErrorByKey(state, types.REGISTRATION_REQUEST),
+  };
+};
+
+export default connect(mapState)(Registration);

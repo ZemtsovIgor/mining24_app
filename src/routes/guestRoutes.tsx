@@ -1,45 +1,24 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { connect } from 'react-redux';
-import { Route, Redirect, RouteProps } from 'react-router-dom';
-
 import { AuthLayout } from '../components/Layout';
-import { PATHS } from '../const/paths.constants';
 
-interface GuestRoutesProps extends RouteProps {
-  component?: any;
-  loggedIn: boolean;
+interface GuestRoutesProps {
+  children?: React.ReactElement;
   title?: string;
-  rest?: any;
 }
 
 const GuestRoutes: React.FC<GuestRoutesProps> = ({
-  component: Component,
-  loggedIn,
+  children,
   title,
-  ...rest
 }) => {
   const { t } = useTranslation();
+  document.title = `${t(title || '')}`;
 
   return (
-    <Route
-      {...rest}
-      render={props => {
-        document.title = `${t(title || '')}`;
-        return loggedIn ? (
-          <Redirect to={PATHS.DASHBOARD} />
-        ) : (
-          <AuthLayout>
-            <Component {...props} />
-          </AuthLayout>
-        );
-      }}
-    />
+    <AuthLayout>
+      { children }
+    </AuthLayout>
   );
 };
 
-const mapStateToProps = (state: any) => ({
-  loggedIn: state.user.loggedIn,
-});
-
-export default connect(mapStateToProps)(GuestRoutes);
+export default GuestRoutes;

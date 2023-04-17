@@ -1,7 +1,7 @@
 import CssBaseline from '@mui/material/CssBaseline';
 import { StylesProvider } from '@mui/styles';
 import React from 'react';
-import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
 import { GlobalStyle } from './App.Styles';
 import { PATHS } from './const/paths.constants';
@@ -17,45 +17,119 @@ import Shop from './pages/Shop/Shop';
 import Statistics from "./pages/Statistics/Statistics";
 import Transactions from "./pages/Transactions/Transactions";
 import Referrals from "./pages/Referrals/Referrals";
-import Settings from "./pages/Settings/Settings";
-import Profile from "./pages/Profile/Profile";
+import Settings from "./pages/Settings";
+import Profile from "./pages/Profile";
 
 function App() {
   return (
     <StylesProvider injectFirst>
       <GlobalStyle />
       <CssBaseline />
-      <Router>
-        <Route exact path="/" render={() => <Redirect to={PATHS.DASHBOARD} />} />
-        <PrivateRoutes exact path={PATHS.DASHBOARD} component={Home} title="navBar.dashboard" />
-        <PrivateRoutes exact path={PATHS.CONTRACT} component={Contract} title="navBar.contract" />
-        <PrivateRoutes exact path={PATHS.CONTRACT_ITEM} component={ContractItem} title="navBar.contract" />
-        <PrivateRoutes exact path={PATHS.SHOP} component={Shop} title="navBar.shop" />
-        <PrivateRoutes exact path={PATHS.STATISTICS} component={Statistics} title="navBar.statistics" />
-        <PrivateRoutes exact path={PATHS.TRANSACTIONS} component={Transactions} title="navBar.transactions" />
-        <PrivateRoutes exact path={PATHS.REFERRALS} component={Referrals} title="navBar.referrals" />
-        <PrivateRoutes exact path={PATHS.SETTINGS} component={Settings} title="navBar.settings" />
-        <PrivateRoutes exact path={PATHS.PROFILE} component={Profile} title="navBar.profile" />
+      <Routes>
+        <Route
+          path="*"
+          element={<Navigate to={PATHS.DASHBOARD} replace />}
+        />
+        <Route
+          path={PATHS.DASHBOARD}
+          element={
+            <PrivateRoutes title="navBar.dashboard">
+              <Home />
+            </PrivateRoutes>
+          }
+        />
+        <Route
+          path={PATHS.CONTRACT}
+          element={
+            <PrivateRoutes title="navBar.contract">
+              <Contract />
+            </PrivateRoutes>
+          }
+        />
+        <Route
+          path={PATHS.CONTRACT_ITEM}
+          element={
+            <PrivateRoutes title="navBar.contract">
+              <ContractItem />
+            </PrivateRoutes>
+          }
+        />
+        <Route
+          path={PATHS.SHOP}
+          element={
+            <PrivateRoutes title="navBar.shop">
+              <Shop />
+            </PrivateRoutes>
+          }
+        />
+        <Route
+          path={PATHS.STATISTICS}
+          element={
+            <PrivateRoutes title="navBar.statistics">
+              <Statistics />
+            </PrivateRoutes>
+          }
+        />
+        <Route
+          path={PATHS.TRANSACTIONS}
+          element={
+            <PrivateRoutes title="navBar.transactions">
+              <Transactions />
+            </PrivateRoutes>
+          }
+        />
+        <Route
+          path={PATHS.REFERRALS}
+          element={
+            <PrivateRoutes title="navBar.referrals">
+              <Referrals />
+            </PrivateRoutes>
+          }
+        />
+        <Route
+          path={PATHS.SETTINGS}
+          element={
+            <PrivateRoutes title="navBar.settings">
+              <Settings />
+            </PrivateRoutes>
+          }
+        />
+        <Route
+          path={PATHS.PROFILE}
+          element={
+            <PrivateRoutes title="navBar.profile">
+              <Profile />
+            </PrivateRoutes>
+          }
+        />
 
-        <GuestRoutes
-          exact
+        <Route
           path={PATHS.LOGIN}
-          component={Login}
-          title="login.page.title"
+          element={
+            <GuestRoutes title="login.page.title">
+              <Login />
+            </GuestRoutes>
+          }
         />
-        <GuestRoutes
-          exact
+
+        <Route
           path={PATHS.REGISTRATION}
-          component={Registration}
-          title="registration.page.title"
+          element={
+            <GuestRoutes title="registration.page.title">
+              <Registration />
+            </GuestRoutes>
+          }
         />
-        <GuestRoutes
-          exact
+
+        <Route
           path={PATHS.FORGOT_PASSWORD}
-          component={ForgotPassword}
-          title="forgotPassword.page.title"
+          element={
+            <GuestRoutes title="forgotPassword.page.title">
+              <ForgotPassword />
+            </GuestRoutes>
+          }
         />
-      </Router>
+      </Routes>
     </StylesProvider>
   );
 }
